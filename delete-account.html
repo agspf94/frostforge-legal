@@ -6,15 +6,27 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main{max-width:860px;margin:0 auto;padding:32px 16px 64px}
 header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
-header a{color:var(--muted);text-decoration:none;margin-left:12px}header strong{font-size:1.2rem}
+header nav a{color:var(--muted);text-decoration:none;margin-left:12px}header strong{font-size:1.2rem}
 a{color:var(--accent)}h1{margin-top:40px}h2{margin-top:28px;font-size:1.15rem}
 .table{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem;background:var(--card)}
 th,td{border:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}th{background:var(--bg)}
-code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 4px;overflow-wrap:anywhere}
 .box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin:16px 0}
 hr{border:0;border-top:1px solid var(--line);margin:40px 0}
-</style></head>
-<body><main><header><strong>Frostforge</strong><nav><a href="./">Home</a><a href="privacy-policy.html">Privacy</a><a href="delete-account.html">Delete account</a></nav></header>
+.langs{display:none;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.langs button{font:inherit;font-size:.9rem;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer;min-height:36px}
+.langs button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);font-weight:600}
+.langs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.nojs-langs a{margin-right:10px}
+.js .langs{display:flex}.js .nojs-langs{display:none}
+.js section[data-lang]:not(.active),.js hr.sep{display:none}
+.js section[data-lang]>h1:first-child{margin-top:16px}
+</style>
+<script>document.documentElement.classList.add('js')</script></head>
+<body><main><header><strong>Frostforge</strong><nav><a href="./" data-href="./">Home</a><a href="privacy-policy.html" data-href="privacy-policy.html">Privacy</a><a href="delete-account.html" data-href="delete-account.html">Delete account</a></nav></header>
+<div class="langs" role="group" aria-label="Language / Idioma"><button type="button" data-lang="en" lang="en" aria-pressed="true"><span aria-hidden="true">🇺🇸</span> EN</button><button type="button" data-lang="pt-br" lang="pt-BR" aria-pressed="false"><span aria-hidden="true">🇧🇷</span> PT-BR</button><button type="button" data-lang="es" lang="es-419" aria-pressed="false"><span aria-hidden="true">🇪🇸</span> ES</button></div>
+<p class="nojs-langs"><a href="#en" lang="en">EN</a><a href="#pt-br" lang="pt-BR">PT-BR</a><a href="#es" lang="es-419">ES</a></p>
+<section data-lang="en" lang="en">
 <h1 id="en">Delete your Frostforge account and data</h1>
 <div class="box">
 <p><strong>In the game (fastest):</strong> open <strong>Menu → Delete account</strong> and confirm. Your save, your Google link, your sign-in
@@ -27,7 +39,9 @@ your account: the approximate date and time you last played, your device model, 
 feedback messages and usage statistics.</p>
 <p><strong>What may remain for a short time:</strong> technical logs (up to 30 days), production backups (up to 35 days), and a copy of
 feedback emailed to the developer inbox (deleted on request). Details: <a href="privacy-policy.html">Privacy Policy</a>.</p>
-<hr />
+</section>
+<hr class="sep">
+<section data-lang="pt-br" lang="pt-BR">
 <h1 id="pt-br">Excluir sua conta e seus dados do Frostforge</h1>
 <div class="box">
 <p><strong>No jogo (mais rápido):</strong> abra <strong>Menu → Excluir conta</strong> e confirme. Seu progresso, o vínculo com o Google, seu registro
@@ -41,4 +55,66 @@ Respondemos em até 30 dias.</p>
 registro de login, mensagens de feedback e estatísticas de uso.</p>
 <p><strong>O que pode permanecer por pouco tempo:</strong> logs técnicos (até 30 dias), backups de produção (até 35 dias) e a cópia do
 feedback enviada por e-mail ao desenvolvedor (apagada mediante pedido). Detalhes: <a href="privacy-policy.html#pt-br">Política de Privacidade</a>.</p>
-</main></body></html>
+</section>
+<hr class="sep">
+<section data-lang="es" lang="es-419">
+<h1 id="es">Eliminar tu cuenta y tus datos de Frostforge</h1>
+<div class="box">
+<p><strong>En el juego (lo más rápido):</strong> abre <strong>Menú → Eliminar cuenta</strong> y confirma. Tu partida, tu vínculo con Google, tu registro
+de inicio de sesión y tus comentarios se eliminan de inmediato. No se puede deshacer.</p>
+<p><strong>Sin la app</strong> (por ejemplo, si la desinstalaste): escribe a <strong><a href="mailto:playfrostforge@gmail.com?subject=Eliminaci%C3%B3n%20de%20cuenta%20Frostforge">playfrostforge@gmail.com</a></strong>
+con el asunto "Eliminación de cuenta Frostforge". Las cuentas de invitado no tienen nombre ni correo, así que incluye todo lo que
+nos ayude a encontrar tu cuenta: la fecha y hora aproximadas en que jugaste por última vez, el modelo de tu dispositivo o el id de un
+comentario. Respondemos en un plazo de 30 días.</p>
+</div>
+<p><strong>Qué se elimina:</strong> estado del juego (base, recursos, investigaciones, héroes, tropas), id de la cuenta, vínculo con Google,
+registro de inicio de sesión, comentarios y estadísticas de uso.</p>
+<p><strong>Qué puede permanecer por poco tiempo:</strong> registros técnicos (hasta 30 días), copias de seguridad de producción (hasta 35 días) y la
+copia de los comentarios enviada por correo al desarrollador (se elimina si lo solicitas). Detalles: <a href="privacy-policy.html#es">Política de Privacidad</a>.</p>
+</section>
+</main>
+<script>
+(function(){
+  var ids=["en", "pt-br", "es"], langs={"en": "en", "pt-br": "pt-BR", "es": "es-419"}, titles={"en": "Delete Frostforge Account", "pt-br": "Excluir conta do Frostforge", "es": "Eliminar cuenta de Frostforge"}, nav={"en": ["Home", "Privacy", "Delete account"], "pt-br": ["Início", "Privacidade", "Excluir conta"], "es": ["Inicio", "Privacidad", "Eliminar cuenta"]}, KEY='frostforge-lang';
+  function norm(v){
+    if(!v) return null; v=String(v).toLowerCase();
+    if(v.indexOf('pt')===0) return 'pt-br';
+    if(v.indexOf('es')===0) return 'es';
+    if(v.indexOf('en')===0) return 'en';
+    return null;
+  }
+  function fromUrl(){
+    var h=location.hash.replace('#','').toLowerCase();
+    if(ids.indexOf(h)>=0) return h;
+    try{ return norm(new URLSearchParams(location.search).get('lang')); }catch(e){ return null; }
+  }
+  function saved(){ try{ return norm(localStorage.getItem(KEY)); }catch(e){ return null; } }
+  function apply(id){
+    document.querySelectorAll('section[data-lang]').forEach(function(s){
+      s.classList.toggle('active', s.getAttribute('data-lang')===id);
+    });
+    document.querySelectorAll('.langs button').forEach(function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang')===id ? 'true' : 'false');
+    });
+    document.documentElement.lang=langs[id];
+    if(titles[id]) document.title=titles[id];
+    document.querySelectorAll('header nav a').forEach(function(a,i){
+      a.textContent=nav[id][i];
+      a.setAttribute('href', a.getAttribute('data-href')+(id==='en'?'':'#'+id));
+    });
+  }
+  var start=fromUrl()||saved()||norm(navigator.language)||'en';
+  apply(start);
+  window.scrollTo(0,0);
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var id=b.getAttribute('data-lang');
+      try{ localStorage.setItem(KEY,id); }catch(e){}
+      try{ history.replaceState(null,'','#'+id); }catch(e){ location.hash=id; }
+      apply(id); window.scrollTo(0,0);
+    });
+  });
+  window.addEventListener('hashchange', function(){ var id=fromUrl(); if(id){ apply(id); window.scrollTo(0,0); } });
+})();
+</script>
+</body></html>
