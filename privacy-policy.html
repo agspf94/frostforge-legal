@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Frostforge Privacy Policy</title><style>
+:root{--bg:#f7f8fa;--fg:#1c2330;--muted:#5b6575;--card:#fff;--line:#dde2ea;--accent:#d9621f}
+@media (prefers-color-scheme:dark){:root{--bg:#10141b;--fg:#e6e9ef;--muted:#9aa4b4;--card:#171c25;--line:#2a3140;--accent:#ff8a3d}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:32px 16px 64px}
+header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
+header a{color:var(--muted);text-decoration:none;margin-left:12px}header strong{font-size:1.2rem}
+a{color:var(--accent)}h1{margin-top:40px}h2{margin-top:28px;font-size:1.15rem}
+.table{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}th{background:var(--bg)}
+code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin:16px 0}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+</style></head>
+<body><main><header><strong>Frostforge</strong><nav><a href="./">Home</a><a href="privacy-policy.html">Privacy</a><a href="delete-account.html">Delete account</a></nav></header>
+<h1 id="en">English</h1>
+<p><strong>Last updated:</strong> 2026-10-20</p>
+<h2>1. Who we are</h2>
+<p>"Frostforge" (placeholder name) is a mobile game. The data controller is the Frostforge developer, Anderson Fantin.
+Contact for privacy requests: playfrostforge@gmail.com. The game is for players aged 16 and over.</p>
+<h2>2. What we collect and why</h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Data</th>
+<th>When</th>
+<th>Purpose</th>
+<th>Legal basis (GDPR/LGPD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anonymous account id (Cognito "guest" user id)</td>
+<td>On first launch</td>
+<td>Identify your save so you can play</td>
+<td>Contract (providing the game)</td>
+</tr>
+<tr>
+<td>Game state: base layout, resources, research, heroes, troops, tutorial progress, timestamps</td>
+<td>While playing</td>
+<td>Run the game on our server (the server is authoritative)</td>
+<td>Contract</td>
+</tr>
+<tr>
+<td>Google account identifier (no email or profile) (only if you tap "Link Google")</td>
+<td>When you link</td>
+<td>Recover your save on a new device</td>
+<td>Consent (you choose to link)</td>
+</tr>
+<tr>
+<td>Device integrity token (Google Play Integrity)</td>
+<td>At guest sign-up on Android</td>
+<td>Block fake clients and abuse</td>
+<td>Legitimate interest (security, anti-cheat)</td>
+</tr>
+<tr>
+<td>Technical logs: may include IP address as processed by AWS, request time, endpoint, status, user id</td>
+<td>Every request</td>
+<td>Security, debugging, cost control</td>
+<td>Legitimate interest</td>
+</tr>
+<tr>
+<td>Feedback you send from the menu: your text, your user id, time, app version, platform, language</td>
+<td>When you send feedback</td>
+<td>Read and answer your feedback</td>
+<td>Consent</td>
+</tr>
+<tr>
+<td>Usage statistics, only if you tap "Allow" (changeable in the menu): per day, counts of events such as tutorial steps, sessions, play time, highest Core level, first research/recruit/expedition, and a short code identifying a script error; with your user id, app version and platform</td>
+<td>While you play, after you allow it</td>
+<td>Understand where players get stuck and how many come back</td>
+<td>Consent</td>
+</tr>
+</tbody>
+</table></div>
+<p>We do <strong>not</strong> sell your data, show third-party ads, or use your data for profiling. We do not knowingly collect
+data from children under 16.</p>
+<p>Usage statistics are stored as daily totals per player (not one record per action), contain no free text, advertising
+id or device id, and nothing is sent until you choose "Allow". Native crash reports come from Google Play (Android vitals).</p>
+<p><strong>Planned (not collected yet):</strong> in-app purchase receipts. Before they start, this policy will be updated and, where required, we will ask for consent.</p>
+<h2>3. Who receives your data</h2>
+<ul>
+<li><strong>Amazon Web Services</strong> (hosting, database, logs, sign-in via Amazon Cognito, email notifications). Processor.</li>
+<li><strong>Google</strong> (Google sign-in if you link; Play Integrity; Google Play for distribution and, in future, payments).</li>
+<li>Nobody else. We may disclose data if the law requires it.</li>
+</ul>
+<h2>4. Where data is stored</h2>
+<p>Amazon Web Services region <strong>us-east-2 (Ohio, USA)</strong>. If you are outside the USA your data is transferred there;
+we rely on AWS's standard contractual clauses/data protection terms for transfers from the EU/UK/Brazil.</p>
+<h2>5. How long we keep it</h2>
+<ul>
+<li>Game state and account: until you delete the account.</li>
+<li>Feedback messages: automatically deleted after 180 days (or earlier when you delete your account). A copy is also
+  emailed to the developer inbox and deleted on request.</li>
+<li>Usage statistics: automatically deleted after 120 days (or earlier when you delete your account); the record of your
+  choice (Allow / No thanks) and the day you first chose are kept until you delete your account.</li>
+<li>Technical logs: 30 days (set in AWS CloudWatch).</li>
+<li>A short deletion marker (about 2 hours) is kept after deletion so a stale session cannot recreate the account.</li>
+<li>Backups: in production, DynamoDB point-in-time recovery may keep deleted data in backups for up to 35 days.</li>
+</ul>
+<h2>6. Your rights and how to delete your data</h2>
+<p>Under GDPR (EU/UK) and LGPD (Brazil) you may ask to access, correct, port, or delete your data, object to processing,
+and withdraw consent at any time. You can also complain to your data protection authority (in Brazil, the ANPD).
+- <strong>Delete everything yourself:</strong> in the game open Menu -&gt; Delete account. This removes your save, your link to Google,
+  your sign-in record and your feedback rows immediately (backend <code>DELETE /v1/me</code>). It cannot be undone.
+- <strong>Other requests:</strong> email playfrostforge@gmail.com. We answer within 30 days. We may need details such as the approximate time of play or a feedback id to
+  find your data, since guest accounts have no name or email.
+- If you linked Google, unlinking or deleting on Google's side does not delete the game save; use Delete account.</p>
+<h2>7. Security</h2>
+<p>Data is encrypted in transit (HTTPS) and at rest (AWS-managed encryption). Access to the backend is limited to the
+developer through AWS IAM. No system is perfectly secure; we will notify authorities and affected players of
+breaches as the law requires.</p>
+<h2>8. Changes</h2>
+<p>We will post changes here and update the date above. Material changes will be announced in the game.</p>
+<hr />
+<h1 id="pt-br">Português (Brasil)</h1>
+<p><strong>Última atualização:</strong> 2026-10-20</p>
+<h2>1. Quem somos</h2>
+<p>"Frostforge" (nome provisório) é um jogo para celular. O controlador dos dados é the Frostforge developer, Anderson Fantin.
+Contato para pedidos de privacidade (encarregado/DPO): playfrostforge@gmail.com. O jogo é para maiores de 16 anos.</p>
+<h2>2. O que coletamos e por quê</h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Dado</th>
+<th>Quando</th>
+<th>Finalidade</th>
+<th>Base legal (LGPD/GDPR)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identificador anônimo da conta (usuário "convidado" do Cognito)</td>
+<td>No primeiro acesso</td>
+<td>Identificar seu progresso para você jogar</td>
+<td>Execução de contrato</td>
+</tr>
+<tr>
+<td>Estado do jogo: base, recursos, pesquisas, heróis, tropas, tutorial, horários</td>
+<td>Durante o jogo</td>
+<td>Executar o jogo em nosso servidor (o servidor é a autoridade)</td>
+<td>Execução de contrato</td>
+</tr>
+<tr>
+<td>Identificador da conta Google (sem e-mail nem perfil) (somente se você tocar em "Vincular Google")</td>
+<td>Ao vincular</td>
+<td>Recuperar o progresso em outro aparelho</td>
+<td>Consentimento</td>
+</tr>
+<tr>
+<td>Token de integridade do aparelho (Google Play Integrity)</td>
+<td>No cadastro de convidado no Android</td>
+<td>Bloquear clientes falsos e abuso</td>
+<td>Legítimo interesse (segurança)</td>
+</tr>
+<tr>
+<td>Logs técnicos: pode incluir endereço IP conforme processado pela AWS, horário, endpoint, status, id do usuário</td>
+<td>A cada requisição</td>
+<td>Segurança, correção de erros, controle de custo</td>
+<td>Legítimo interesse</td>
+</tr>
+<tr>
+<td>Feedback enviado pelo menu: texto, id do usuário, horário, versão do app, plataforma, idioma</td>
+<td>Ao enviar</td>
+<td>Ler e responder seu feedback</td>
+<td>Consentimento</td>
+</tr>
+<tr>
+<td>Estatísticas de uso, somente se você tocar em "Permitir" (alterável no menu): por dia, contagem de eventos como etapas do tutorial, sessões, tempo de jogo, maior nível do Núcleo, primeira pesquisa/recrutamento/expedição e um código curto que identifica um erro de script; com seu id de usuário, versão do app e plataforma</td>
+<td>Durante o jogo, depois que você permitir</td>
+<td>Entender onde os jogadores travam e quantos voltam</td>
+<td>Consentimento</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Não</strong> vendemos seus dados, não exibimos anúncios de terceiros e não fazemos perfilamento. Não coletamos
+intencionalmente dados de menores de 16 anos.</p>
+<p>As estatísticas de uso são guardadas como totais diários por jogador (não um registro por ação), não contêm texto livre,
+id de publicidade nem id do aparelho, e nada é enviado até você escolher "Permitir". Falhas nativas vêm do Google Play (Android vitals).</p>
+<p><strong>Planejado (ainda não coletado):</strong> comprovantes de compras no app. Antes disso atualizaremos esta política e, quando exigido, pediremos consentimento.</p>
+<h2>3. Com quem compartilhamos</h2>
+<ul>
+<li><strong>Amazon Web Services</strong> (hospedagem, banco de dados, logs, login via Amazon Cognito, e-mails de notificação). Operador.</li>
+<li><strong>Google</strong> (login Google se você vincular; Play Integrity; Google Play para distribuição e, no futuro, pagamentos).</li>
+<li>Ninguém mais. Podemos divulgar dados se a lei exigir.</li>
+</ul>
+<h2>4. Onde os dados ficam</h2>
+<p>Região da AWS <strong>us-east-2 (Ohio, EUA)</strong>. Fora dos EUA, seus dados são transferidos para lá (transferência
+internacional, art. 33 da LGPD), com base nas cláusulas contratuais padrão e nos termos de proteção de dados da AWS.</p>
+<h2>5. Por quanto tempo guardamos</h2>
+<ul>
+<li>Estado do jogo e conta: até você excluir a conta.</li>
+<li>Mensagens de feedback: apagadas automaticamente após 180 dias (ou antes, ao excluir a conta). Uma cópia também é
+  enviada por e-mail ao desenvolvedor e é apagada mediante pedido.</li>
+<li>Estatísticas de uso: apagadas automaticamente após 120 dias (ou antes, ao excluir a conta); o registro da sua escolha
+  (Permitir / Agora não) e o dia da primeira escolha ficam até você excluir a conta.</li>
+<li>Logs técnicos: 30 dias (configurado no AWS CloudWatch).</li>
+<li>Backups: em produção, a recuperação pontual do DynamoDB pode manter dados excluídos em backups por até 35 dias.</li>
+<li>Um marcador curto de exclusão (cerca de 2 horas) permanece após a exclusão para que uma sessão antiga não recrie a conta.</li>
+</ul>
+<h2>6. Seus direitos e como excluir seus dados</h2>
+<p>Pela LGPD (Brasil) e GDPR (UE/Reino Unido) você pode solicitar confirmação de tratamento, acesso, correção,
+portabilidade, anonimização/eliminação, informação sobre compartilhamento, oposição e revogação do consentimento a
+qualquer momento. Você também pode reclamar à autoridade de proteção de dados (no Brasil, a ANPD).
+- <strong>Excluir tudo por conta própria:</strong> no jogo, Menu -&gt; Excluir conta. Isso remove imediatamente seu progresso, o
+  vínculo com o Google, seu registro de login e seus feedbacks (backend <code>DELETE /v1/me</code>). Não pode ser desfeito.
+- <strong>Outros pedidos:</strong> escreva para playfrostforge@gmail.com. Respondemos em até 30 dias. Podemos pedir dados como o horário aproximado de jogo ou o id de um feedback para
+  localizar seus dados, pois contas de convidado não têm nome nem e-mail.
+- Se você vinculou o Google, desvincular ou excluir no Google não apaga o progresso do jogo; use Excluir conta.</p>
+<h2>7. Segurança</h2>
+<p>Os dados são criptografados em trânsito (HTTPS) e em repouso (criptografia gerenciada pela AWS). O acesso ao backend
+é restrito ao desenvolvedor via AWS IAM. Nenhum sistema é totalmente seguro; comunicaremos incidentes à autoridade e
+aos jogadores afetados conforme a lei.</p>
+<h2>8. Alterações</h2>
+<p>Publicaremos mudanças aqui e atualizaremos a data. Mudanças relevantes serão avisadas no jogo.</p>
+</main></body></html>
