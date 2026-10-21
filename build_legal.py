@@ -37,6 +37,10 @@ NAV = {
 md = Path(src_repo, "docs/legal/privacy-policy.md").read_text(encoding="utf-8")
 # Drop the draft header and hosting proposal: keep from the first "# English".
 md = md[md.index("# English"):]
+# The game repo now also carries the Spanish section; prefer it over the local copy.
+if "# Español (Latinoamérica)" in md:
+    md, game_es = md.split("# Español (Latinoamérica)", 1)
+    (here / "src/privacy-policy.es.md").write_text("# Español (Latinoamérica)" + game_es, encoding="utf-8")
 md_es = (here / "src/privacy-policy.es.md").read_text(encoding="utf-8")
 repl = {
     "`[DATE]`": date, "`[DATA]`": date, "`[FECHA]`": date,

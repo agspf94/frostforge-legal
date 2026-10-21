@@ -28,7 +28,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 <p class="nojs-langs"><a href="#en" lang="en">EN</a><a href="#pt-br" lang="pt-BR">PT-BR</a><a href="#es" lang="es-419">ES</a></p>
 <section data-lang="en" lang="en">
 <h1 id="en">English</h1>
-<p><strong>Last updated:</strong> 2026-10-20</p>
+<p><strong>Last updated:</strong> 2026-10-21</p>
 <h2>1. Who we are</h2>
 <p>"Frostforge" (placeholder name) is a mobile game. The data controller is the Frostforge developer, Anderson Fantin.
 Contact for privacy requests: playfrostforge@gmail.com. The game is for players aged 16 and over.</p>
@@ -80,6 +80,12 @@ Contact for privacy requests: playfrostforge@gmail.com. The game is for players 
 <td>Consent</td>
 </tr>
 <tr>
+<td>Support requests: the text you write, our team's replies, your follow-up replies, a support code, your user id, time, app version, platform, language</td>
+<td>When you send a support request or reply</td>
+<td>Answer your request. No other purpose</td>
+<td>Consent</td>
+</tr>
+<tr>
 <td>Usage statistics, only if you tap "Allow" (changeable in the menu): per day, counts of events such as tutorial steps, sessions, play time, highest Core level, first research/recruit/expedition, and a short code identifying a script error; with your user id, app version and platform</td>
 <td>While you play, after you allow it</td>
 <td>Understand where players get stuck and how many come back</td>
@@ -96,16 +102,28 @@ id or device id, and nothing is sent until you choose "Allow". Native crash repo
 <ul>
 <li><strong>Amazon Web Services</strong> (hosting, database, logs, sign-in via Amazon Cognito, email notifications). Processor.</li>
 <li><strong>Google</strong> (Google sign-in if you link; Play Integrity; Google Play for distribution and, in future, payments).</li>
+<li><strong>GitHub, Inc.</strong> (United States), a service provider that hosts our request-tracking system. The text of your support requests and replies, and your support code, are processed there only to handle your request. Not used for any other purpose. Processor.</li>
+<li><strong>Anthropic, PBC</strong> (United States), provider of the AI tools that help our team read, sort and draft answers to support requests. It receives the content of support requests only for that purpose. Processor.</li>
 <li>Nobody else. We may disclose data if the law requires it.</li>
 </ul>
 <h2>4. Where data is stored</h2>
 <p>Amazon Web Services region <strong>us-east-2 (Ohio, USA)</strong>. If you are outside the USA your data is transferred there;
-we rely on AWS's standard contractual clauses/data protection terms for transfers from the EU/UK/Brazil.</p>
+we rely on AWS's standard contractual clauses/data protection terms for transfers from the EU/UK/Brazil.
+Support requests are also stored by <strong>GitHub, Inc.</strong> in the <strong>USA</strong>. For that transfer we rely on GitHub's Data Protection
+Agreement, which includes the standard contractual clauses (GDPR Chapter V; LGPD art. 33). The AI tools from
+<strong>Anthropic, PBC</strong> (section 3) process support request content in the USA on the same basis (Anthropic's data processing terms with standard contractual clauses).</p>
 <h2>5. How long we keep it</h2>
 <ul>
 <li>Game state and account: until you delete the account.</li>
 <li>Feedback messages: automatically deleted after 180 days (or earlier when you delete your account). A copy is also
   emailed to the developer inbox and deleted on request.</li>
+<li>Support requests in our game database (your text, our replies and your replies, shown on the Support screen): deleted
+  automatically 180 days after the last update to the request (or earlier when you delete your account).</li>
+<li>Support requests on GitHub (where our team handles them): once a request is closed, the comments holding the text you wrote are deleted
+  automatically about 180 days after its last update (or earlier when you delete your account: usually at once,
+  at the latest within a day or so, and the request is closed). What stays on GitHub is a closed request record with no
+  text you wrote: your support code, the request category, app version, platform and language, plus our team's replies
+  and internal notes about the request.</li>
 <li>Usage statistics: automatically deleted after 120 days (or earlier when you delete your account); the record of your
   choice (Allow / No thanks) and the day you first chose are kept until you delete your account.</li>
 <li>Technical logs: 30 days (set in AWS CloudWatch).</li>
@@ -116,8 +134,9 @@ we rely on AWS's standard contractual clauses/data protection terms for transfer
 <p>Under GDPR (EU/UK) and LGPD (Brazil) you may ask to access, correct, port, or delete your data, object to processing,
 and withdraw consent at any time. You can also complain to your data protection authority (in Brazil, the ANPD).
 - <strong>Delete everything yourself:</strong> in the game open Menu -&gt; Delete account. This removes your save, your link to Google,
-  your sign-in record and your feedback rows immediately (backend <code>DELETE /v1/me</code>). It cannot be undone.
-- <strong>Other requests:</strong> email playfrostforge@gmail.com. We answer within 30 days. We may need details such as the approximate time of play or a feedback id to
+  your sign-in record, your feedback rows and your support requests immediately (backend <code>DELETE /v1/me</code>), and deletes the
+  GitHub comments that hold your support request text. A closed request record without your text stays on GitHub (see section 5). It cannot be undone.
+- <strong>Other requests:</strong> email playfrostforge@gmail.com. We answer within 30 days. We may need details such as your support code (shown on the Support screen), the approximate time of play or a feedback id to
   find your data, since guest accounts have no name or email.
 - If you linked Google, unlinking or deleting on Google's side does not delete the game save; use Delete account.</p>
 <h2>7. Security</h2>
@@ -130,7 +149,7 @@ breaches as the law requires.</p>
 <hr class="sep">
 <section data-lang="pt-br" lang="pt-BR">
 <h1 id="pt-br">Português (Brasil)</h1>
-<p><strong>Última atualização:</strong> 2026-10-20</p>
+<p><strong>Última atualização:</strong> 2026-10-21</p>
 <h2>1. Quem somos</h2>
 <p>"Frostforge" (nome provisório) é um jogo para celular. O controlador dos dados é the Frostforge developer, Anderson Fantin.
 Contato para pedidos de privacidade (encarregado/DPO): playfrostforge@gmail.com. O jogo é para maiores de 16 anos.</p>
@@ -182,6 +201,12 @@ Contato para pedidos de privacidade (encarregado/DPO): playfrostforge@gmail.com.
 <td>Consentimento</td>
 </tr>
 <tr>
+<td>Pedidos de suporte: o texto que você escreve, as respostas da nossa equipe, suas respostas, um código de suporte, seu id de usuário, horário, versão do app, plataforma, idioma</td>
+<td>Ao enviar um pedido de suporte ou uma resposta</td>
+<td>Responder ao seu pedido. Nenhuma outra finalidade</td>
+<td>Consentimento</td>
+</tr>
+<tr>
 <td>Estatísticas de uso, somente se você tocar em "Permitir" (alterável no menu): por dia, contagem de eventos como etapas do tutorial, sessões, tempo de jogo, maior nível do Núcleo, primeira pesquisa/recrutamento/expedição e um código curto que identifica um erro de script; com seu id de usuário, versão do app e plataforma</td>
 <td>Durante o jogo, depois que você permitir</td>
 <td>Entender onde os jogadores travam e quantos voltam</td>
@@ -198,16 +223,28 @@ id de publicidade nem id do aparelho, e nada é enviado até você escolher "Per
 <ul>
 <li><strong>Amazon Web Services</strong> (hospedagem, banco de dados, logs, login via Amazon Cognito, e-mails de notificação). Operador.</li>
 <li><strong>Google</strong> (login Google se você vincular; Play Integrity; Google Play para distribuição e, no futuro, pagamentos).</li>
+<li><strong>GitHub, Inc.</strong> (Estados Unidos), prestador de serviço que hospeda nosso sistema de acompanhamento de pedidos. O texto dos seus pedidos de suporte e respostas, e seu código de suporte, são tratados lá somente para atender ao seu pedido. Nenhuma outra finalidade. Operador.</li>
+<li><strong>Anthropic, PBC</strong> (Estados Unidos), fornecedora das ferramentas de IA que ajudam nossa equipe a ler, organizar e redigir respostas aos pedidos de suporte. Recebe o conteúdo dos pedidos de suporte somente para essa finalidade. Operador.</li>
 <li>Ninguém mais. Podemos divulgar dados se a lei exigir.</li>
 </ul>
 <h2>4. Onde os dados ficam</h2>
 <p>Região da AWS <strong>us-east-2 (Ohio, EUA)</strong>. Fora dos EUA, seus dados são transferidos para lá (transferência
-internacional, art. 33 da LGPD), com base nas cláusulas contratuais padrão e nos termos de proteção de dados da AWS.</p>
+internacional, art. 33 da LGPD), com base nas cláusulas contratuais padrão e nos termos de proteção de dados da AWS.
+Os pedidos de suporte também ficam guardados pela <strong>GitHub, Inc.</strong> nos <strong>EUA</strong>. Para essa transferência usamos o Acordo de
+Proteção de Dados da GitHub, que inclui as cláusulas contratuais padrão (art. 33 da LGPD; Capítulo V do GDPR). As
+ferramentas de IA da <strong>Anthropic, PBC</strong> (seção 3) tratam o conteúdo dos pedidos de suporte nos EUA com a mesma base (termos de tratamento de dados da Anthropic com cláusulas contratuais padrão).</p>
 <h2>5. Por quanto tempo guardamos</h2>
 <ul>
 <li>Estado do jogo e conta: até você excluir a conta.</li>
 <li>Mensagens de feedback: apagadas automaticamente após 180 dias (ou antes, ao excluir a conta). Uma cópia também é
   enviada por e-mail ao desenvolvedor e é apagada mediante pedido.</li>
+<li>Pedidos de suporte no banco de dados do jogo (seu texto, nossas respostas e suas respostas, exibidos na tela de Suporte):
+  apagados automaticamente 180 dias após a última atualização do pedido (ou antes, ao excluir a conta).</li>
+<li>Pedidos de suporte no GitHub (onde nossa equipe os atende): depois que um pedido é encerrado, os comentários com o texto que você escreveu são apagados
+  automaticamente cerca de 180 dias após a última atualização dele (ou antes, ao excluir a conta: normalmente na hora, no
+  máximo em cerca de um dia, e o pedido é encerrado). Fica no GitHub um registro encerrado do pedido sem nenhum texto
+  seu: seu código de suporte, a categoria do pedido, versão do app, plataforma e idioma, além das respostas da nossa
+  equipe e notas internas sobre o pedido.</li>
 <li>Estatísticas de uso: apagadas automaticamente após 120 dias (ou antes, ao excluir a conta); o registro da sua escolha
   (Permitir / Agora não) e o dia da primeira escolha ficam até você excluir a conta.</li>
 <li>Logs técnicos: 30 dias (configurado no AWS CloudWatch).</li>
@@ -219,8 +256,9 @@ internacional, art. 33 da LGPD), com base nas cláusulas contratuais padrão e n
 portabilidade, anonimização/eliminação, informação sobre compartilhamento, oposição e revogação do consentimento a
 qualquer momento. Você também pode reclamar à autoridade de proteção de dados (no Brasil, a ANPD).
 - <strong>Excluir tudo por conta própria:</strong> no jogo, Menu -&gt; Excluir conta. Isso remove imediatamente seu progresso, o
-  vínculo com o Google, seu registro de login e seus feedbacks (backend <code>DELETE /v1/me</code>). Não pode ser desfeito.
-- <strong>Outros pedidos:</strong> escreva para playfrostforge@gmail.com. Respondemos em até 30 dias. Podemos pedir dados como o horário aproximado de jogo ou o id de um feedback para
+  vínculo com o Google, seu registro de login, seus feedbacks e seus pedidos de suporte (backend <code>DELETE /v1/me</code>), além de
+  apagar os comentários do GitHub com o texto dos seus pedidos de suporte. Um registro encerrado do pedido, sem o seu texto, fica no GitHub (veja a seção 5). Não pode ser desfeito.
+- <strong>Outros pedidos:</strong> escreva para playfrostforge@gmail.com. Respondemos em até 30 dias. Podemos pedir dados como seu código de suporte (exibido na tela de Suporte), o horário aproximado de jogo ou o id de um feedback para
   localizar seus dados, pois contas de convidado não têm nome nem e-mail.
 - Se você vinculou o Google, desvincular ou excluir no Google não apaga o progresso do jogo; use Excluir conta.</p>
 <h2>7. Segurança</h2>
@@ -233,11 +271,11 @@ aos jogadores afetados conforme a lei.</p>
 <hr class="sep">
 <section data-lang="es" lang="es-419">
 <h1 id="es">Español (Latinoamérica)</h1>
-<p><strong>Última actualización:</strong> 2026-10-20</p>
-<h2>1. Quiénes somos</h2>
-<p>"Frostforge" (nombre provisional) es un juego para dispositivos móviles. El responsable del tratamiento de los datos es el desarrollador de Frostforge, Anderson Fantin.
-Contacto para solicitudes de privacidad: playfrostforge@gmail.com. El juego es para jugadores de 16 años o más.</p>
-<h2>2. Qué datos recopilamos y para qué</h2>
+<p><strong>Última actualización:</strong> 2026-10-21</p>
+<h2>1. Quién somos</h2>
+<p>"Frostforge" (nombre provisional) es un juego para celular. El responsable del tratamiento de los datos es el desarrollador de Frostforge, Anderson Fantin.
+Contacto para solicitudes de privacidad: playfrostforge@gmail.com. El juego es para mayores de 16 años.</p>
+<h2>2. Qué recopilamos y por qué</h2>
 <div class="table"><table>
 <thead>
 <tr>
@@ -249,27 +287,27 @@ Contacto para solicitudes de privacidad: playfrostforge@gmail.com. El juego es p
 </thead>
 <tbody>
 <tr>
-<td>Id de cuenta anónimo (id de usuario "invitado" de Cognito)</td>
-<td>Al abrir el juego por primera vez</td>
-<td>Identificar tu partida para que puedas jugar</td>
-<td>Contrato (prestación del juego)</td>
+<td>Identificador anónimo de la cuenta (usuario "invitado" de Cognito)</td>
+<td>En el primer inicio</td>
+<td>Identificar tu progreso para que puedas jugar</td>
+<td>Ejecución de contrato (proveer el juego)</td>
 </tr>
 <tr>
-<td>Estado del juego: diseño de la base, recursos, investigaciones, héroes, tropas, progreso del tutorial, marcas de tiempo</td>
+<td>Estado del juego: base, recursos, investigación, héroes, tropas, avance del tutorial, marcas de tiempo</td>
 <td>Mientras juegas</td>
-<td>Ejecutar el juego en nuestro servidor (el servidor es la fuente autorizada)</td>
-<td>Contrato</td>
+<td>Ejecutar el juego en nuestro servidor (el servidor es la autoridad)</td>
+<td>Ejecución de contrato</td>
 </tr>
 <tr>
 <td>Identificador de la cuenta de Google (sin correo ni perfil) (solo si tocas "Vincular Google")</td>
-<td>Cuando vinculas</td>
-<td>Recuperar tu partida en otro dispositivo</td>
+<td>Al vincular</td>
+<td>Recuperar tu progreso en otro dispositivo</td>
 <td>Consentimiento (tú eliges vincular)</td>
 </tr>
 <tr>
 <td>Token de integridad del dispositivo (Google Play Integrity)</td>
-<td>Al registrarte como invitado en Android</td>
-<td>Bloquear clientes falsos y abusos</td>
+<td>En el registro de invitado en Android</td>
+<td>Bloquear clientes falsos y abuso</td>
 <td>Interés legítimo (seguridad, antitrampas)</td>
 </tr>
 <tr>
@@ -280,58 +318,76 @@ Contacto para solicitudes de privacidad: playfrostforge@gmail.com. El juego es p
 </tr>
 <tr>
 <td>Comentarios que envías desde el menú: tu texto, tu id de usuario, hora, versión de la app, plataforma, idioma</td>
-<td>Cuando envías un comentario</td>
+<td>Al enviar comentarios</td>
 <td>Leer y responder tus comentarios</td>
 <td>Consentimiento</td>
 </tr>
 <tr>
-<td>Estadísticas de uso, solo si tocas "Permitir" (se puede cambiar en el menú): por día, conteo de eventos como pasos del tutorial, sesiones, tiempo de juego, nivel más alto del Núcleo, primera investigación/reclutamiento/expedición y un código corto que identifica un error de script; junto con tu id de usuario, versión de la app y plataforma</td>
+<td>Solicitudes de soporte: el texto que escribes, las respuestas de nuestro equipo, tus respuestas posteriores, un código de soporte, tu id de usuario, hora, versión de la app, plataforma, idioma</td>
+<td>Al enviar una solicitud de soporte o una respuesta</td>
+<td>Responder tu solicitud. Ninguna otra finalidad</td>
+<td>Consentimiento</td>
+</tr>
+<tr>
+<td>Estadísticas de uso, solo si tocas "Permitir" (se puede cambiar en el menú): por día, conteos de eventos como pasos del tutorial, sesiones, tiempo de juego, nivel más alto del Núcleo, primera investigación/reclutamiento/expedición y un código corto que identifica un error de script; con tu id de usuario, versión de la app y plataforma</td>
 <td>Mientras juegas, después de que lo permitas</td>
-<td>Entender dónde se atascan los jugadores y cuántos regresan</td>
+<td>Entender dónde se traban los jugadores y cuántos regresan</td>
 <td>Consentimiento</td>
 </tr>
 </tbody>
 </table></div>
-<p><strong>No</strong> vendemos tus datos, no mostramos anuncios de terceros ni usamos tus datos para elaborar perfiles. No recopilamos
+<p><strong>No</strong> vendemos tus datos, no mostramos anuncios de terceros y no los usamos para elaborar perfiles. No recopilamos
 a sabiendas datos de menores de 16 años.</p>
 <p>Las estadísticas de uso se guardan como totales diarios por jugador (no un registro por acción), no contienen texto libre,
 id de publicidad ni id del dispositivo, y no se envía nada hasta que eliges "Permitir". Los informes de fallos nativos provienen de Google Play (Android vitals).</p>
-<p><strong>Previsto (aún no se recopila):</strong> comprobantes de compras dentro de la app. Antes de que empiecen, actualizaremos esta política y, cuando sea necesario, pediremos tu consentimiento.</p>
+<p><strong>Planificado (aún no se recopila):</strong> comprobantes de compras dentro de la app. Antes de que empiecen, actualizaremos esta política y, donde sea necesario, pediremos consentimiento.</p>
 <h2>3. Quién recibe tus datos</h2>
 <ul>
 <li><strong>Amazon Web Services</strong> (alojamiento, base de datos, registros, inicio de sesión mediante Amazon Cognito, notificaciones por correo). Encargado del tratamiento.</li>
-<li><strong>Google</strong> (inicio de sesión con Google si vinculas; Play Integrity; Google Play para la distribución y, en el futuro, los pagos).</li>
+<li><strong>Google</strong> (inicio de sesión con Google si vinculas; Play Integrity; Google Play para distribución y, en el futuro, pagos).</li>
+<li><strong>GitHub, Inc.</strong> (Estados Unidos), proveedor de servicios que aloja nuestro sistema de seguimiento de solicitudes. El texto de tus solicitudes de soporte y respuestas, y tu código de soporte, se procesan allí solo para atender tu solicitud. No se usan para ninguna otra finalidad. Encargado del tratamiento.</li>
+<li><strong>Anthropic, PBC</strong> (Estados Unidos), proveedora de las herramientas de IA que ayudan a nuestro equipo a leer, clasificar y redactar respuestas a las solicitudes de soporte. Recibe el contenido de las solicitudes de soporte solo para esa finalidad. Encargado del tratamiento.</li>
 <li>Nadie más. Podemos divulgar datos si la ley lo exige.</li>
 </ul>
 <h2>4. Dónde se almacenan los datos</h2>
 <p>Región de Amazon Web Services <strong>us-east-2 (Ohio, EE. UU.)</strong>. Si estás fuera de EE. UU., tus datos se transfieren allí;
-para las transferencias desde la UE/Reino Unido/Brasil nos basamos en las cláusulas contractuales tipo/condiciones de protección de datos de AWS.</p>
+nos basamos en las cláusulas contractuales tipo y los términos de protección de datos de AWS para las transferencias desde la UE, el Reino Unido y Brasil.
+Las solicitudes de soporte también las almacena <strong>GitHub, Inc.</strong> en <strong>EE. UU.</strong> Para esa transferencia nos basamos en el Acuerdo de Protección
+de Datos de GitHub, que incluye las cláusulas contractuales tipo (GDPR Capítulo V; LGPD art. 33). Las herramientas de IA de
+<strong>Anthropic, PBC</strong> (sección 3) procesan el contenido de las solicitudes de soporte en EE. UU. con la misma base (términos de procesamiento de datos de Anthropic con cláusulas contractuales tipo).</p>
 <h2>5. Cuánto tiempo los conservamos</h2>
 <ul>
 <li>Estado del juego y cuenta: hasta que elimines la cuenta.</li>
-<li>Comentarios: se eliminan automáticamente después de 180 días (o antes, cuando eliminas tu cuenta). También se envía una copia
-  por correo a la bandeja del desarrollador, que se elimina si lo solicitas.</li>
+<li>Mensajes de comentarios: se eliminan automáticamente después de 180 días (o antes, cuando eliminas tu cuenta). También se
+  envía una copia por correo a la bandeja del desarrollador, que se elimina a pedido.</li>
+<li>Solicitudes de soporte en la base de datos de nuestro juego (tu texto, nuestras respuestas y las tuyas, que se muestran en la pantalla de Soporte): se eliminan
+  automáticamente 180 días después de la última actualización de la solicitud (o antes, cuando eliminas tu cuenta).</li>
+<li>Solicitudes de soporte en GitHub (donde nuestro equipo las atiende): una vez cerrada una solicitud, los comentarios que contienen el texto que escribiste se eliminan
+  automáticamente unos 180 días después de su última actualización (o antes, cuando eliminas tu cuenta: normalmente de inmediato,
+  como máximo en aproximadamente un día, y la solicitud se cierra). Lo que queda en GitHub es un registro cerrado de la solicitud sin ningún
+  texto tuyo: tu código de soporte, la categoría de la solicitud, versión de la app, plataforma e idioma, además de las respuestas de nuestro equipo
+  y las notas internas sobre la solicitud.</li>
 <li>Estadísticas de uso: se eliminan automáticamente después de 120 días (o antes, cuando eliminas tu cuenta); el registro de tu
   elección (Permitir / No, gracias) y el día en que elegiste por primera vez se conservan hasta que elimines tu cuenta.</li>
 <li>Registros técnicos: 30 días (configurado en AWS CloudWatch).</li>
-<li>Tras la eliminación se conserva una breve marca de eliminación (unas 2 horas) para que una sesión antigua no pueda volver a crear la cuenta.</li>
-<li>Copias de seguridad: en producción, la recuperación a un punto en el tiempo de DynamoDB puede conservar datos eliminados en copias de seguridad hasta por 35 días.</li>
+<li>Un breve marcador de eliminación (unas 2 horas) permanece después de la eliminación para que una sesión antigua no pueda recrear la cuenta.</li>
+<li>Copias de seguridad: en producción, la recuperación a un punto en el tiempo de DynamoDB puede conservar datos eliminados en copias de seguridad hasta 35 días.</li>
 </ul>
 <h2>6. Tus derechos y cómo eliminar tus datos</h2>
-<p>Según el GDPR (UE/Reino Unido) y la LGPD (Brasil) puedes solicitar acceder a tus datos, corregirlos, portarlos o eliminarlos, oponerte al tratamiento
+<p>Según el GDPR (UE/Reino Unido) y la LGPD (Brasil) puedes solicitar acceso, rectificación, portabilidad o eliminación de tus datos, oponerte al tratamiento
 y retirar tu consentimiento en cualquier momento. También puedes presentar una queja ante tu autoridad de protección de datos (en Brasil, la ANPD).
-Si estás en otro país de Latinoamérica, también puedes contactar a la autoridad de protección de datos de tu país.
-- <strong>Elimina todo tú mismo:</strong> en el juego abre Menú -&gt; Eliminar cuenta. Esto elimina de inmediato tu partida, tu vínculo con Google,
-  tu registro de inicio de sesión y tus comentarios (backend <code>DELETE /v1/me</code>). No se puede deshacer.
-- <strong>Otras solicitudes:</strong> escribe a playfrostforge@gmail.com. Respondemos en un plazo de 30 días. Es posible que necesitemos datos como la hora aproximada en que jugaste o el id de un comentario para
+- <strong>Elimina todo por tu cuenta:</strong> en el juego abre Menú -&gt; Eliminar cuenta. Esto elimina de inmediato tu progreso, tu vínculo con Google,
+  tu registro de inicio de sesión, tus comentarios y tus solicitudes de soporte (backend <code>DELETE /v1/me</code>), y borra los
+  comentarios de GitHub que contienen el texto de tus solicitudes de soporte. Un registro cerrado de la solicitud sin tu texto permanece en GitHub (ver sección 5). No se puede deshacer.
+- <strong>Otras solicitudes:</strong> escribe a playfrostforge@gmail.com. Respondemos en un plazo de 30 días. Es posible que necesitemos datos como tu código de soporte (se muestra en la pantalla de Soporte), la hora aproximada de juego o el id de un comentario para
   encontrar tus datos, ya que las cuentas de invitado no tienen nombre ni correo.
-- Si vinculaste Google, desvincular o eliminar desde Google no elimina tu partida del juego; usa Eliminar cuenta.</p>
+- Si vinculaste Google, desvincular o eliminar del lado de Google no elimina el progreso del juego; usa Eliminar cuenta.</p>
 <h2>7. Seguridad</h2>
 <p>Los datos se cifran en tránsito (HTTPS) y en reposo (cifrado administrado por AWS). El acceso al backend está limitado al
 desarrollador mediante AWS IAM. Ningún sistema es perfectamente seguro; notificaremos a las autoridades y a los jugadores afectados
-sobre incidentes de seguridad según lo exija la ley.</p>
+de las brechas según lo exija la ley.</p>
 <h2>8. Cambios</h2>
-<p>Publicaremos los cambios aquí y actualizaremos la fecha indicada arriba. Los cambios importantes se anunciarán en el juego.</p>
+<p>Publicaremos los cambios aquí y actualizaremos la fecha de arriba. Los cambios importantes se anunciarán en el juego.</p>
 </section>
 </main>
 <script>

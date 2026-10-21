@@ -5,8 +5,8 @@ at https://agspf94.github.io/frostforge-legal/ in English, Portuguese (Brazil) a
 
 ## Sources
 
-- English and Portuguese: `docs/legal/privacy-policy.md` in the private game repo.
-- Spanish (es-419): `src/privacy-policy.es.md` in this repo. The account-deletion and index texts for all
+- English, Portuguese and Spanish: `docs/legal/privacy-policy.md` in the private game repo (the build copies the Spanish section into `src/privacy-policy.es.md`).
+- The account-deletion and index texts for all
   three languages live in `build_legal.py`.
 
 Edit the sources, never the generated HTML.
