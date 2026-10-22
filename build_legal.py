@@ -10,7 +10,9 @@ Each page holds one <section lang="..."> per language. A small script shows one 
 time (URL #hash or ?lang= > saved choice > browser language); without JavaScript all sections
 stay visible.
 """
+import json
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -20,6 +22,7 @@ src_repo, out, controller, date = sys.argv[1:5]
 controller_es = sys.argv[5] if len(sys.argv) > 5 else re.sub(
     r"^the Frostforge developer, ", "el desarrollador de Frostforge, ", controller)
 email = "playfrostforge@gmail.com"
+DELETE_URL = "https://agspf94.github.io/frostforge-legal/delete-account.html"
 out = Path(out)
 here = Path(__file__).resolve().parent
 
@@ -48,6 +51,9 @@ repl = {
     "`[OWNER LEGAL NAME / CONTACT ENTITY]`": controller,
     "`[NOME LEGAL DO RESPONSÁVEL]`": controller,
     "`[NOMBRE LEGAL DEL RESPONSABLE]`": controller_es,
+    "`[ACCOUNT DELETION URL]`": f"[{DELETE_URL}]({DELETE_URL})",
+    "`[URL DE EXCLUSÃO DE CONTA]`": f"[{DELETE_URL}]({DELETE_URL})",
+    "`[URL DE ELIMINACIÓN DE CUENTA]`": f"[{DELETE_URL}]({DELETE_URL})",
 }
 for k, v in repl.items():
     md = md.replace(k, v)
@@ -233,9 +239,19 @@ registro de inicio de sesión, comentarios y estadísticas de uso.
 copia de los comentarios enviada por correo al desarrollador (se elimina si lo solicitas). Detalles: [Política de Privacidad](privacy-policy.html#es).
 """
 dconv = lambda s: markdown.markdown(s, extensions=["attr_list", "md_in_html"])
-(out / "delete-account.html").write_text(page(
-    {"en": "Delete Frostforge Account", "pt-br": "Excluir conta do Frostforge", "es": "Eliminar cuenta de Frostforge"},
-    {"en": dconv(delete_en), "pt-br": dconv(delete_pt), "es": dconv(delete_es)}), encoding="utf-8")
+# Self-service deletion page (#850, #865): when the game repo has docs/legal/web/ with a filled config
+# (prod apiBase/hostedUi/clientId from the stack outputs), publish that page and its config as-is.
+# Otherwise fall back to the static instructions page below.
+web = Path(src_repo, "docs/legal/web")
+web_cfg = web / "delete-account-config.json"
+if (web / "delete-account.html").exists() and web_cfg.exists() and all(
+        json.loads(web_cfg.read_text(encoding="utf-8")).get(k) for k in ("apiBase", "hostedUi", "clientId")):
+    shutil.copyfile(web / "delete-account.html", out / "delete-account.html")
+    shutil.copyfile(web_cfg, out / "delete-account-config.json")
+else:
+    (out / "delete-account.html").write_text(page(
+        {"en": "Delete Frostforge Account", "pt-br": "Excluir conta do Frostforge", "es": "Eliminar cuenta de Frostforge"},
+        {"en": dconv(delete_en), "pt-br": dconv(delete_pt), "es": dconv(delete_es)}), encoding="utf-8")
 
 index = {
     "en": f"""
@@ -274,9 +290,9 @@ Un juego de estrategia y construcción de fábricas para Android, en desarrollo.
     "# frostforge-legal\n\nPublic pages for the Frostforge game (privacy policy, account deletion), served by GitHub Pages\n"
     "at https://agspf94.github.io/frostforge-legal/ in English, Portuguese (Brazil) and Spanish (Latin America).\n\n"
     "## Sources\n\n"
-    "- English and Portuguese: `docs/legal/privacy-policy.md` in the private game repo.\n"
-    "- Spanish (es-419): `src/privacy-policy.es.md` in this repo. The account-deletion and index texts for all\n"
-    "  three languages live in `build_legal.py`.\n\n"
+    "- English, Portuguese and Spanish: `docs/legal/privacy-policy.md` in the private game repo (the build copies the Spanish section into `src/privacy-policy.es.md`).\n"
+    "- Account deletion: `docs/legal/web/delete-account.html` and its `delete-account-config.json` in the game repo, published as-is\n"
+    "  once the config holds the prod values; otherwise a static page whose texts live in `build_legal.py`, like the index texts.\n\n"
     "Edit the sources, never the generated HTML.\n\n"
     "## Rebuild\n\n"
     "Needs Python 3 and `pip install markdown`. From this repo, with the game repo checked out next to it:\n\n"
