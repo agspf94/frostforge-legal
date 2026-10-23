@@ -6,8 +6,8 @@ at https://agspf94.github.io/frostforge-legal/ in English, Portuguese (Brazil) a
 ## Sources
 
 - English, Portuguese and Spanish: `docs/legal/privacy-policy.md` in the private game repo (the build copies the Spanish section into `src/privacy-policy.es.md`).
-- The account-deletion and index texts for all
-  three languages live in `build_legal.py`.
+- Account deletion: `docs/legal/web/delete-account.html` and its `delete-account-config.json` in the game repo, published as-is
+  once the config holds the prod values; otherwise a static page whose texts live in `build_legal.py`, like the index texts.
 
 Edit the sources, never the generated HTML.
 

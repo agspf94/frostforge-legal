@@ -28,7 +28,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 <p class="nojs-langs"><a href="#en" lang="en">EN</a><a href="#pt-br" lang="pt-BR">PT-BR</a><a href="#es" lang="es-419">ES</a></p>
 <section data-lang="en" lang="en">
 <h1 id="en">English</h1>
-<p><strong>Last updated:</strong> 2026-10-21</p>
+<p><strong>Last updated:</strong> 2026-10-23</p>
 <h2>1. Who we are</h2>
 <p>"Frostforge" (placeholder name) is a mobile game. The data controller is the Frostforge developer, Anderson Fantin.
 Contact for privacy requests: playfrostforge@gmail.com. The game is for players aged 16 and over.</p>
@@ -44,9 +44,9 @@ Contact for privacy requests: playfrostforge@gmail.com. The game is for players 
 </thead>
 <tbody>
 <tr>
-<td>Anonymous account id (Cognito "guest" user id)</td>
-<td>On first launch</td>
-<td>Identify your save so you can play</td>
+<td>Account id (Amazon Cognito user id created when you first sign in with Google or Apple)</td>
+<td>At your first sign-in</td>
+<td>Identify your save so you can play on any device</td>
 <td>Contract (providing the game)</td>
 </tr>
 <tr>
@@ -56,14 +56,14 @@ Contact for privacy requests: playfrostforge@gmail.com. The game is for players 
 <td>Contract</td>
 </tr>
 <tr>
-<td>Google account identifier (no email or profile) (only if you tap "Link Google")</td>
-<td>When you link</td>
-<td>Recover your save on a new device</td>
-<td>Consent (you choose to link)</td>
+<td>Google or Apple account identifier (no email, name or profile; sign-in scope <code>openid</code> only)</td>
+<td>When you sign in</td>
+<td>Sign you in and give you the same save on a new device or platform</td>
+<td>Contract (sign-in is required to play)</td>
 </tr>
 <tr>
 <td>Device integrity token (Google Play Integrity)</td>
-<td>At guest sign-up on Android</td>
+<td>When a new account first opens its base on Android</td>
 <td>Block fake clients and abuse</td>
 <td>Legitimate interest (security, anti-cheat)</td>
 </tr>
@@ -114,31 +114,34 @@ Agreement, which includes the standard contractual clauses (GDPR Chapter V; LGPD
 <strong>Anthropic, PBC</strong> (section 3) process support request content in the USA on the same basis (Anthropic's data processing terms with standard contractual clauses).</p>
 <h2>5. How long we keep it</h2>
 <ul>
-<li>Game state and account: until you delete the account.</li>
-<li>Feedback messages: automatically deleted after 180 days (or earlier when you delete your account). A copy is also
-  emailed to the developer inbox and deleted on request.</li>
+<li>Game state and account: until your account is permanently deleted (30 days after you delete it).</li>
+<li>Feedback messages: automatically deleted after 180 days (or when your account is permanently deleted, 30 days after you delete it).</li>
 <li>Support requests in our game database (your text, our replies and your replies, shown on the Support screen): deleted
-  automatically 180 days after the last update to the request (or earlier when you delete your account).</li>
+  automatically 180 days after the last update to the request (or when your account is permanently deleted, 30 days after you delete it).</li>
 <li>Support requests on GitHub (where our team handles them): once a request is closed, the comments holding the text you wrote are deleted
-  automatically about 180 days after its last update (or earlier when you delete your account: usually at once,
+  automatically about 180 days after its last update (or when your account is permanently deleted, 30 days after you delete it: usually at once,
   at the latest within a day or so, and the request is closed). What stays on GitHub is a closed request record with no
   text you wrote: your support code, the request category, app version, platform and language, plus our team's replies
   and internal notes about the request.</li>
-<li>Usage statistics: automatically deleted after 120 days (or earlier when you delete your account); the record of your
-  choice (Allow / No thanks) and the day you first chose are kept until you delete your account.</li>
+<li>Usage statistics: automatically deleted after 120 days (or when your account is permanently deleted, 30 days after you delete it); the record of your
+  choice (Allow / No thanks) and the day you first chose are kept until the account is permanently deleted.</li>
 <li>Technical logs: 30 days (set in AWS CloudWatch).</li>
-<li>A short deletion marker (about 2 hours) is kept after deletion so a stale session cannot recreate the account.</li>
-<li>Backups: in production, DynamoDB point-in-time recovery may keep deleted data in backups for up to 35 days.</li>
+<li>When you delete your account it is disabled for 30 days (your data is kept, frozen and out of the game, so you can restore it if the deletion was a mistake or someone else did it). After 30 days everything is deleted automatically.</li>
+<li>A short deletion marker (about 2 hours) is kept after the permanent deletion so a stale session cannot recreate the account.</li>
+<li>Backups: in production, DynamoDB point-in-time recovery may keep deleted data in backups for up to 35 days after the permanent deletion.</li>
 </ul>
 <h2>6. Your rights and how to delete your data</h2>
 <p>Under GDPR (EU/UK) and LGPD (Brazil) you may ask to access, correct, port, or delete your data, object to processing,
 and withdraw consent at any time. You can also complain to your data protection authority (in Brazil, the ANPD).
-- <strong>Delete everything yourself:</strong> in the game open Menu -&gt; Delete account. This removes your save, your link to Google,
-  your sign-in record, your feedback rows and your support requests immediately (backend <code>DELETE /v1/me</code>), and deletes the
-  GitHub comments that hold your support request text. A closed request record without your text stays on GitHub (see section 5). It cannot be undone.
-- <strong>Other requests:</strong> email playfrostforge@gmail.com. We answer within 30 days. We may need details such as your support code (shown on the Support screen), the approximate time of play or a feedback id to
-  find your data, since guest accounts have no name or email.
-- If you linked Google, unlinking or deleting on Google's side does not delete the game save; use Delete account.</p>
+- <strong>Delete everything yourself:</strong> in the game open Menu -&gt; Delete account. It disables your account at once and permanently
+  deletes your save, your link to Google/Apple, your sign-in record, your feedback and your support requests (and the GitHub
+  comments that hold your support request text) 30 days later, automatically. Sign in again within the 30 days and tap
+  Restore to cancel. After that it cannot be undone. A closed request record without your text stays on GitHub (see section 5).
+- <strong>No app installed?</strong> Open <a href="https://agspf94.github.io/frostforge-legal/delete-account.html">https://agspf94.github.io/frostforge-legal/delete-account.html</a>, sign in with Google or Apple, and request deletion there.
+- <strong>Access, correction or portability requests:</strong> email playfrostforge@gmail.com. We answer within 30 days. We may need details such as your support code (shown on the Support screen), the approximate time of play or a feedback id to
+  find your data, since accounts have no name or email. You do not need to email us to delete your data.
+- If you linked Google, unlinking or deleting on Google's side does not delete the game save; use Delete account (30-day window above).
+- Your account is your Google or Apple sign-in: on a new device, sign in with the same account to get your save back.</p>
 <h2>7. Security</h2>
 <p>Data is encrypted in transit (HTTPS) and at rest (AWS-managed encryption). Access to the backend is limited to the
 developer through AWS IAM. No system is perfectly secure; we will notify authorities and affected players of
@@ -149,7 +152,7 @@ breaches as the law requires.</p>
 <hr class="sep">
 <section data-lang="pt-br" lang="pt-BR">
 <h1 id="pt-br">Português (Brasil)</h1>
-<p><strong>Última atualização:</strong> 2026-10-21</p>
+<p><strong>Última atualização:</strong> 2026-10-23</p>
 <h2>1. Quem somos</h2>
 <p>"Frostforge" (nome provisório) é um jogo para celular. O controlador dos dados é the Frostforge developer, Anderson Fantin.
 Contato para pedidos de privacidade (encarregado/DPO): playfrostforge@gmail.com. O jogo é para maiores de 16 anos.</p>
@@ -165,9 +168,9 @@ Contato para pedidos de privacidade (encarregado/DPO): playfrostforge@gmail.com.
 </thead>
 <tbody>
 <tr>
-<td>Identificador anônimo da conta (usuário "convidado" do Cognito)</td>
-<td>No primeiro acesso</td>
-<td>Identificar seu progresso para você jogar</td>
+<td>Identificador da conta (id de usuário do Amazon Cognito criado no seu primeiro login com Google ou Apple)</td>
+<td>No primeiro login</td>
+<td>Identificar seu progresso para você jogar em qualquer aparelho</td>
 <td>Execução de contrato</td>
 </tr>
 <tr>
@@ -177,14 +180,14 @@ Contato para pedidos de privacidade (encarregado/DPO): playfrostforge@gmail.com.
 <td>Execução de contrato</td>
 </tr>
 <tr>
-<td>Identificador da conta Google (sem e-mail nem perfil) (somente se você tocar em "Vincular Google")</td>
-<td>Ao vincular</td>
-<td>Recuperar o progresso em outro aparelho</td>
-<td>Consentimento</td>
+<td>Identificador da conta Google ou Apple (sem e-mail, nome nem perfil; escopo de login apenas <code>openid</code>)</td>
+<td>Ao entrar</td>
+<td>Fazer seu login e entregar o mesmo progresso em outro aparelho ou plataforma</td>
+<td>Execução de contrato (o login é necessário para jogar)</td>
 </tr>
 <tr>
 <td>Token de integridade do aparelho (Google Play Integrity)</td>
-<td>No cadastro de convidado no Android</td>
+<td>Quando uma conta nova abre a base pela primeira vez no Android</td>
 <td>Bloquear clientes falsos e abuso</td>
 <td>Legítimo interesse (segurança)</td>
 </tr>
@@ -235,32 +238,35 @@ Proteção de Dados da GitHub, que inclui as cláusulas contratuais padrão (art
 ferramentas de IA da <strong>Anthropic, PBC</strong> (seção 3) tratam o conteúdo dos pedidos de suporte nos EUA com a mesma base (termos de tratamento de dados da Anthropic com cláusulas contratuais padrão).</p>
 <h2>5. Por quanto tempo guardamos</h2>
 <ul>
-<li>Estado do jogo e conta: até você excluir a conta.</li>
-<li>Mensagens de feedback: apagadas automaticamente após 180 dias (ou antes, ao excluir a conta). Uma cópia também é
-  enviada por e-mail ao desenvolvedor e é apagada mediante pedido.</li>
+<li>Estado do jogo e conta: até a conta ser excluída permanentemente (30 dias depois de você excluí-la).</li>
+<li>Mensagens de feedback: apagadas automaticamente após 180 dias (ou quando a conta for excluída permanentemente, 30 dias depois de você excluí-la).</li>
 <li>Pedidos de suporte no banco de dados do jogo (seu texto, nossas respostas e suas respostas, exibidos na tela de Suporte):
-  apagados automaticamente 180 dias após a última atualização do pedido (ou antes, ao excluir a conta).</li>
+  apagados automaticamente 180 dias após a última atualização do pedido (ou quando a conta for excluída permanentemente, 30 dias depois de você excluí-la).</li>
 <li>Pedidos de suporte no GitHub (onde nossa equipe os atende): depois que um pedido é encerrado, os comentários com o texto que você escreveu são apagados
-  automaticamente cerca de 180 dias após a última atualização dele (ou antes, ao excluir a conta: normalmente na hora, no
+  automaticamente cerca de 180 dias após a última atualização dele (ou quando a conta for excluída permanentemente, 30 dias depois de você excluí-la: normalmente na hora, no
   máximo em cerca de um dia, e o pedido é encerrado). Fica no GitHub um registro encerrado do pedido sem nenhum texto
   seu: seu código de suporte, a categoria do pedido, versão do app, plataforma e idioma, além das respostas da nossa
   equipe e notas internas sobre o pedido.</li>
-<li>Estatísticas de uso: apagadas automaticamente após 120 dias (ou antes, ao excluir a conta); o registro da sua escolha
-  (Permitir / Agora não) e o dia da primeira escolha ficam até você excluir a conta.</li>
+<li>Estatísticas de uso: apagadas automaticamente após 120 dias (ou quando a conta for excluída permanentemente, 30 dias depois de você excluí-la); o registro da sua escolha
+  (Permitir / Agora não) e o dia da primeira escolha ficam até a exclusão permanente da conta.</li>
 <li>Logs técnicos: 30 dias (configurado no AWS CloudWatch).</li>
-<li>Backups: em produção, a recuperação pontual do DynamoDB pode manter dados excluídos em backups por até 35 dias.</li>
-<li>Um marcador curto de exclusão (cerca de 2 horas) permanece após a exclusão para que uma sessão antiga não recrie a conta.</li>
+<li>Ao excluir a conta, ela fica desativada por 30 dias (seus dados são mantidos, congelados e fora do jogo, para que você possa restaurá-la se a exclusão foi um engano ou foi feita por outra pessoa). Depois de 30 dias, tudo é apagado automaticamente.</li>
+<li>Backups: em produção, a recuperação pontual do DynamoDB pode manter dados excluídos em backups por até 35 dias após a exclusão permanente.</li>
+<li>Um marcador curto de exclusão (cerca de 2 horas) permanece após a exclusão permanente para que uma sessão antiga não recrie a conta.</li>
 </ul>
 <h2>6. Seus direitos e como excluir seus dados</h2>
 <p>Pela LGPD (Brasil) e GDPR (UE/Reino Unido) você pode solicitar confirmação de tratamento, acesso, correção,
 portabilidade, anonimização/eliminação, informação sobre compartilhamento, oposição e revogação do consentimento a
 qualquer momento. Você também pode reclamar à autoridade de proteção de dados (no Brasil, a ANPD).
-- <strong>Excluir tudo por conta própria:</strong> no jogo, Menu -&gt; Excluir conta. Isso remove imediatamente seu progresso, o
-  vínculo com o Google, seu registro de login, seus feedbacks e seus pedidos de suporte (backend <code>DELETE /v1/me</code>), além de
-  apagar os comentários do GitHub com o texto dos seus pedidos de suporte. Um registro encerrado do pedido, sem o seu texto, fica no GitHub (veja a seção 5). Não pode ser desfeito.
-- <strong>Outros pedidos:</strong> escreva para playfrostforge@gmail.com. Respondemos em até 30 dias. Podemos pedir dados como seu código de suporte (exibido na tela de Suporte), o horário aproximado de jogo ou o id de um feedback para
-  localizar seus dados, pois contas de convidado não têm nome nem e-mail.
-- Se você vinculou o Google, desvincular ou excluir no Google não apaga o progresso do jogo; use Excluir conta.</p>
+- <strong>Excluir tudo por conta própria:</strong> no jogo, Menu -&gt; Excluir conta. Ela desativa sua conta na hora e exclui permanentemente
+  seu progresso, o vínculo com Google/Apple, seu registro de login, seus feedbacks e seus pedidos de suporte (e os comentários
+  do GitHub com o texto dos seus pedidos de suporte) 30 dias depois, automaticamente. Entre de novo dentro dos 30 dias e
+  toque em Restaurar para cancelar. Depois disso, não pode ser desfeito. Um registro encerrado do pedido, sem o seu texto, fica no GitHub (veja a seção 5).
+- <strong>Sem o app instalado?</strong> Abra <a href="https://agspf94.github.io/frostforge-legal/delete-account.html">https://agspf94.github.io/frostforge-legal/delete-account.html</a>, entre com Google ou Apple e peça a exclusão por lá.
+- <strong>Pedidos de acesso, correção ou portabilidade:</strong> escreva para playfrostforge@gmail.com. Respondemos em até 30 dias. Podemos pedir dados como seu código de suporte (exibido na tela de Suporte), o horário aproximado de jogo ou o id de um feedback para
+  localizar seus dados, pois as contas não têm nome nem e-mail. Você não precisa nos escrever para excluir seus dados.
+- Se você vinculou o Google, desvincular ou excluir no Google não apaga o progresso do jogo; use Excluir conta (janela de 30 dias acima).
+- Sua conta é o seu login do Google ou da Apple: num aparelho novo, entre com a mesma conta para recuperar seu progresso.</p>
 <h2>7. Segurança</h2>
 <p>Os dados são criptografados em trânsito (HTTPS) e em repouso (criptografia gerenciada pela AWS). O acesso ao backend
 é restrito ao desenvolvedor via AWS IAM. Nenhum sistema é totalmente seguro; comunicaremos incidentes à autoridade e
@@ -271,7 +277,7 @@ aos jogadores afetados conforme a lei.</p>
 <hr class="sep">
 <section data-lang="es" lang="es-419">
 <h1 id="es">Español (Latinoamérica)</h1>
-<p><strong>Última actualización:</strong> 2026-10-21</p>
+<p><strong>Última actualización:</strong> 2026-10-23</p>
 <h2>1. Quién somos</h2>
 <p>"Frostforge" (nombre provisional) es un juego para celular. El responsable del tratamiento de los datos es el desarrollador de Frostforge, Anderson Fantin.
 Contacto para solicitudes de privacidad: playfrostforge@gmail.com. El juego es para mayores de 16 años.</p>
@@ -287,9 +293,9 @@ Contacto para solicitudes de privacidad: playfrostforge@gmail.com. El juego es p
 </thead>
 <tbody>
 <tr>
-<td>Identificador anónimo de la cuenta (usuario "invitado" de Cognito)</td>
-<td>En el primer inicio</td>
-<td>Identificar tu progreso para que puedas jugar</td>
+<td>Identificador de la cuenta (id de usuario de Amazon Cognito creado al iniciar sesión por primera vez con Google o Apple)</td>
+<td>En tu primer inicio de sesión</td>
+<td>Identificar tu progreso para que puedas jugar en cualquier dispositivo</td>
 <td>Ejecución de contrato (proveer el juego)</td>
 </tr>
 <tr>
@@ -299,14 +305,14 @@ Contacto para solicitudes de privacidad: playfrostforge@gmail.com. El juego es p
 <td>Ejecución de contrato</td>
 </tr>
 <tr>
-<td>Identificador de la cuenta de Google (sin correo ni perfil) (solo si tocas "Vincular Google")</td>
-<td>Al vincular</td>
-<td>Recuperar tu progreso en otro dispositivo</td>
-<td>Consentimiento (tú eliges vincular)</td>
+<td>Identificador de la cuenta de Google o Apple (sin correo, nombre ni perfil; alcance de inicio de sesión solo <code>openid</code>)</td>
+<td>Al iniciar sesión</td>
+<td>Iniciar tu sesión y darte el mismo progreso en otro dispositivo o plataforma</td>
+<td>Ejecución de contrato (iniciar sesión es necesario para jugar)</td>
 </tr>
 <tr>
 <td>Token de integridad del dispositivo (Google Play Integrity)</td>
-<td>En el registro de invitado en Android</td>
+<td>Cuando una cuenta nueva abre su base por primera vez en Android</td>
 <td>Bloquear clientes falsos y abuso</td>
 <td>Interés legítimo (seguridad, antitrampas)</td>
 </tr>
@@ -357,31 +363,34 @@ de Datos de GitHub, que incluye las cláusulas contractuales tipo (GDPR Capítul
 <strong>Anthropic, PBC</strong> (sección 3) procesan el contenido de las solicitudes de soporte en EE. UU. con la misma base (términos de procesamiento de datos de Anthropic con cláusulas contractuales tipo).</p>
 <h2>5. Cuánto tiempo los conservamos</h2>
 <ul>
-<li>Estado del juego y cuenta: hasta que elimines la cuenta.</li>
-<li>Mensajes de comentarios: se eliminan automáticamente después de 180 días (o antes, cuando eliminas tu cuenta). También se
-  envía una copia por correo a la bandeja del desarrollador, que se elimina a pedido.</li>
+<li>Estado del juego y cuenta: hasta que la cuenta se elimine de forma permanente (30 días después de que la elimines).</li>
+<li>Mensajes de comentarios: se eliminan automáticamente después de 180 días (o cuando la cuenta se elimina de forma permanente, 30 días después de que la elimines).</li>
 <li>Solicitudes de soporte en la base de datos de nuestro juego (tu texto, nuestras respuestas y las tuyas, que se muestran en la pantalla de Soporte): se eliminan
-  automáticamente 180 días después de la última actualización de la solicitud (o antes, cuando eliminas tu cuenta).</li>
+  automáticamente 180 días después de la última actualización de la solicitud (o cuando la cuenta se elimina de forma permanente, 30 días después de que la elimines).</li>
 <li>Solicitudes de soporte en GitHub (donde nuestro equipo las atiende): una vez cerrada una solicitud, los comentarios que contienen el texto que escribiste se eliminan
-  automáticamente unos 180 días después de su última actualización (o antes, cuando eliminas tu cuenta: normalmente de inmediato,
+  automáticamente unos 180 días después de su última actualización (o cuando la cuenta se elimina de forma permanente, 30 días después de que la elimines: normalmente de inmediato,
   como máximo en aproximadamente un día, y la solicitud se cierra). Lo que queda en GitHub es un registro cerrado de la solicitud sin ningún
   texto tuyo: tu código de soporte, la categoría de la solicitud, versión de la app, plataforma e idioma, además de las respuestas de nuestro equipo
   y las notas internas sobre la solicitud.</li>
-<li>Estadísticas de uso: se eliminan automáticamente después de 120 días (o antes, cuando eliminas tu cuenta); el registro de tu
-  elección (Permitir / No, gracias) y el día en que elegiste por primera vez se conservan hasta que elimines tu cuenta.</li>
+<li>Estadísticas de uso: se eliminan automáticamente después de 120 días (o cuando la cuenta se elimina de forma permanente, 30 días después de que la elimines); el registro de tu
+  elección (Permitir / No, gracias) y el día en que elegiste por primera vez se conservan hasta la eliminación permanente de la cuenta.</li>
 <li>Registros técnicos: 30 días (configurado en AWS CloudWatch).</li>
-<li>Un breve marcador de eliminación (unas 2 horas) permanece después de la eliminación para que una sesión antigua no pueda recrear la cuenta.</li>
-<li>Copias de seguridad: en producción, la recuperación a un punto en el tiempo de DynamoDB puede conservar datos eliminados en copias de seguridad hasta 35 días.</li>
+<li>Cuando eliminas tu cuenta, queda desactivada durante 30 días (tus datos se conservan, congelados y fuera del juego, para que puedas restaurarla si fue un error o lo hizo otra persona). Pasados 30 días, todo se elimina automáticamente.</li>
+<li>Un breve marcador de eliminación (unas 2 horas) permanece después de la eliminación permanente para que una sesión antigua no pueda recrear la cuenta.</li>
+<li>Copias de seguridad: en producción, la recuperación a un punto en el tiempo de DynamoDB puede conservar datos eliminados en copias de seguridad hasta 35 días después de la eliminación permanente.</li>
 </ul>
 <h2>6. Tus derechos y cómo eliminar tus datos</h2>
 <p>Según el GDPR (UE/Reino Unido) y la LGPD (Brasil) puedes solicitar acceso, rectificación, portabilidad o eliminación de tus datos, oponerte al tratamiento
 y retirar tu consentimiento en cualquier momento. También puedes presentar una queja ante tu autoridad de protección de datos (en Brasil, la ANPD).
-- <strong>Elimina todo por tu cuenta:</strong> en el juego abre Menú -&gt; Eliminar cuenta. Esto elimina de inmediato tu progreso, tu vínculo con Google,
-  tu registro de inicio de sesión, tus comentarios y tus solicitudes de soporte (backend <code>DELETE /v1/me</code>), y borra los
-  comentarios de GitHub que contienen el texto de tus solicitudes de soporte. Un registro cerrado de la solicitud sin tu texto permanece en GitHub (ver sección 5). No se puede deshacer.
-- <strong>Otras solicitudes:</strong> escribe a playfrostforge@gmail.com. Respondemos en un plazo de 30 días. Es posible que necesitemos datos como tu código de soporte (se muestra en la pantalla de Soporte), la hora aproximada de juego o el id de un comentario para
-  encontrar tus datos, ya que las cuentas de invitado no tienen nombre ni correo.
-- Si vinculaste Google, desvincular o eliminar del lado de Google no elimina el progreso del juego; usa Eliminar cuenta.</p>
+- <strong>Elimina todo por tu cuenta:</strong> en el juego abre Menú -&gt; Eliminar cuenta. Desactiva tu cuenta de inmediato y elimina de forma
+  permanente tu progreso, tu vínculo con Google/Apple, tu registro de inicio de sesión, tus comentarios y tus solicitudes de
+  soporte (y los comentarios de GitHub que contienen el texto de tus solicitudes de soporte) 30 días después, automáticamente.
+  Inicia sesión de nuevo dentro de los 30 días y toca Restaurar para cancelar. Después no se puede deshacer. Un registro cerrado de la solicitud sin tu texto permanece en GitHub (ver sección 5).
+- <strong>¿Sin la app instalada?</strong> Abre <a href="https://agspf94.github.io/frostforge-legal/delete-account.html">https://agspf94.github.io/frostforge-legal/delete-account.html</a>, inicia sesión con Google o Apple y solicita la eliminación allí.
+- <strong>Solicitudes de acceso, rectificación o portabilidad:</strong> escribe a playfrostforge@gmail.com. Respondemos en un plazo de 30 días. Es posible que necesitemos datos como tu código de soporte (se muestra en la pantalla de Soporte), la hora aproximada de juego o el id de un comentario para
+  encontrar tus datos, ya que las cuentas no tienen nombre ni correo. No necesitas escribirnos para eliminar tus datos.
+- Si vinculaste Google, desvincular o eliminar del lado de Google no elimina el progreso del juego; usa Eliminar cuenta (ventana de 30 días arriba).
+- Tu cuenta es tu inicio de sesión de Google o Apple: en un dispositivo nuevo, inicia sesión con la misma cuenta para recuperar tu progreso.</p>
 <h2>7. Seguridad</h2>
 <p>Los datos se cifran en tránsito (HTTPS) y en reposo (cifrado administrado por AWS). El acceso al backend está limitado al
 desarrollador mediante AWS IAM. Ningún sistema es perfectamente seguro; notificaremos a las autoridades y a los jugadores afectados

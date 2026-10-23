@@ -1,0 +1,8 @@
+{
+  "_comment": "Prod values from the stack outputs (ApiUrl, HostedUiUrl, OAuthClientId). Copied next to delete-account.html in frostforge-legal. Empty apiBase/hostedUi/clientId = the page shows 'unavailable'.",
+  "apiBase": "https://53hcf6wscl.execute-api.us-east-2.amazonaws.com",
+  "hostedUi": "https://frostforge-prod-591702753000.auth.us-east-2.amazoncognito.com",
+  "clientId": "65q4347cbhbdugj530oaodhp95",
+  "google": true,
+  "apple": false
+}
