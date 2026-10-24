@@ -34,7 +34,6 @@ const T = {
   en: {
     title: "Delete your Frostforge account",
     intro: "Sign in with the Google or Apple account you linked in the game. Your account is first disabled for 30 days (you can restore it any time in that period); after that, your save and data are permanently deleted automatically.",
-    guest: "A guest account that was never linked to Google or Apple cannot be reached from here. It is deleted automatically only if you request deletion in the game.",
     google: "Sign in with Google", apple: "Sign in with Apple",
     unavailable: "Sign-in is not available right now. Please try again later.",
     working: "Working...",
@@ -56,7 +55,6 @@ const T = {
   pt: {
     title: "Excluir sua conta do Frostforge",
     intro: "Entre com a conta Google ou Apple que você vinculou no jogo. Sua conta é primeiro desativada por 30 dias (você pode restaurá-la quando quiser nesse período); depois disso, seu progresso e seus dados são excluídos permanentemente, de forma automática.",
-    guest: "Uma conta de convidado que nunca foi vinculada ao Google ou à Apple não pode ser acessada por aqui. Ela só é excluída se você pedir a exclusão dentro do jogo.",
     google: "Entrar com o Google", apple: "Entrar com a Apple",
     unavailable: "O login não está disponível agora. Tente novamente mais tarde.",
     working: "Processando...",
@@ -78,7 +76,6 @@ const T = {
   es: {
     title: "Eliminar tu cuenta de Frostforge",
     intro: "Inicia sesión con la cuenta de Google o Apple que vinculaste en el juego. Tu cuenta se desactiva primero por 30 días (puedes restaurarla cuando quieras en ese lapso); después, tu progreso y tus datos se eliminan de forma permanente y automática.",
-    guest: "Una cuenta de invitado que nunca se vinculó a Google o Apple no se puede alcanzar desde aquí. Solo se elimina si pides la eliminación dentro del juego.",
     google: "Iniciar sesión con Google", apple: "Iniciar sesión con Apple",
     unavailable: "El inicio de sesión no está disponible ahora. Inténtalo más tarde.",
     working: "Procesando...",
@@ -195,7 +192,6 @@ function render() {
     if (note) h += '<p class="err">' + esc(note) + "</p>";
     if (cfg.google !== false) h += '<button class="primary" id="g">' + esc(t("google")) + "</button>";
     if (cfg.apple) h += '<button class="primary" id="a">' + esc(t("apple")) + "</button>";
-    h += '<p class="mut">' + esc(t("guest")) + "</p>";
   } else {
     if (note) h += "<p>" + esc(note) + "</p>";
     if (me.state === "unlinked") h += "<p>" + esc(t("noGame")) + "</p>";
