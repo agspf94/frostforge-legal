@@ -16,6 +16,7 @@ Contacto para solicitudes de privacidad: `[CORREO DE PRIVACIDAD]`. El juego es p
 | Registros técnicos: pueden incluir la dirección IP tal como la procesa AWS, hora de la solicitud, endpoint, estado, id de usuario | En cada solicitud | Seguridad, depuración, control de costos | Interés legítimo |
 | Comentarios que envías desde el menú: tu texto, tu id de usuario, hora, versión de la app, plataforma, idioma | Al enviar comentarios | Leer y responder tus comentarios | Consentimiento |
 | Solicitudes de soporte: el texto que escribes, las respuestas de nuestro equipo, tus respuestas posteriores, un código de soporte, tu id de usuario, hora, versión de la app, plataforma, idioma | Al enviar una solicitud de soporte o una respuesta | Responder tu solicitud. Ninguna otra finalidad | Consentimiento |
+| Imágenes que adjuntas a una solicitud de soporte (hasta 3 por solicitud; la app las reduce y las vuelve a codificar en tu dispositivo, lo que elimina los datos de ubicación y de la cámara) | Al adjuntarlas | Entender y responder tu solicitud. Cada imagen se revisa automáticamente para detectar contenido inapropiado. Ninguna otra finalidad | Consentimiento |
 | Estadísticas de uso, solo si tocas "Permitir" (se puede cambiar en el menú): por día, conteos de eventos como pasos del tutorial, sesiones, tiempo de juego, nivel más alto del Núcleo, primera investigación/reclutamiento/expedición y un código corto que identifica un error de script; con tu id de usuario, versión de la app y plataforma | Mientras juegas, después de que lo permitas | Entender dónde se traban los jugadores y cuántos regresan | Consentimiento |
 
 **No** vendemos tus datos, no mostramos anuncios de terceros y no los usamos para elaborar perfiles. No recopilamos
@@ -27,10 +28,11 @@ id de publicidad ni id del dispositivo, y no se envía nada hasta que eliges "Pe
 **Planificado (aún no se recopila):** comprobantes de compras dentro de la app. Antes de que empiecen, actualizaremos esta política y, donde sea necesario, pediremos consentimiento.
 
 ## 3. Quién recibe tus datos
-- **Amazon Web Services** (alojamiento, base de datos, registros, inicio de sesión mediante Amazon Cognito, notificaciones por correo). Encargado del tratamiento.
+- **Amazon Web Services** (alojamiento, base de datos, registros, inicio de sesión mediante Amazon Cognito, notificaciones por correo, almacenamiento privado de las imágenes de las solicitudes de soporte y su moderación automática mediante Amazon Rekognition). Encargado del tratamiento.
 - **Google** (inicio de sesión con Google si vinculas; Play Integrity; Google Play para distribución y, en el futuro, pagos).
 - **GitHub, Inc.** (Estados Unidos), proveedor de servicios que aloja nuestro sistema de seguimiento de solicitudes. El texto de tus solicitudes de soporte y respuestas, y tu código de soporte, se procesan allí solo para atender tu solicitud. No se usan para ninguna otra finalidad. Encargado del tratamiento.
-- **Anthropic, PBC** (Estados Unidos), proveedora de las herramientas de IA que ayudan a nuestro equipo a leer, clasificar y redactar respuestas a las solicitudes de soporte. Recibe el contenido de las solicitudes de soporte solo para esa finalidad. Encargado del tratamiento.
+- **Anthropic, PBC** (Estados Unidos), proveedora de las herramientas de IA que ayudan a nuestro equipo a leer, clasificar y redactar respuestas a las solicitudes de soporte. Recibe el contenido de las solicitudes de soporte, incluidas las imágenes adjuntas, solo para esa finalidad. Encargado del tratamiento.
+- Las imágenes de las solicitudes de soporte nunca se publican en GitHub.
 - Nadie más. Podemos divulgar datos si la ley lo exige.
 
 ## 4. Dónde se almacenan los datos
@@ -50,6 +52,8 @@ de Datos de GitHub, que incluye las cláusulas contractuales tipo (GDPR Capítul
   como máximo en aproximadamente un día, y la solicitud se cierra). Lo que queda en GitHub es un registro cerrado de la solicitud sin ningún
   texto tuyo: tu código de soporte, la categoría de la solicitud, versión de la app, plataforma e idioma, además de las respuestas de nuestro equipo
   y las notas internas sobre la solicitud.
+- Imágenes adjuntas a una solicitud de soporte: se eliminan en cuanto se cierra la solicitud (por ti o por nuestro equipo) y,
+  en cualquier caso, a más tardar 30 días después de enviarlas, también cuando se elimina tu cuenta.
 - Estadísticas de uso: se eliminan automáticamente después de 120 días (o cuando la cuenta se elimina de forma permanente, 30 días después de que la elimines); el registro de tu
   elección (Permitir / No, gracias) y el día en que elegiste por primera vez se conservan hasta la eliminación permanente de la cuenta.
 - Registros técnicos: 30 días (configurado en AWS CloudWatch).
