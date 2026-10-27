@@ -28,9 +28,10 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 <p class="nojs-langs"><a href="#en" lang="en">EN</a><a href="#pt-br" lang="pt-BR">PT-BR</a><a href="#es" lang="es-419">ES</a></p>
 <section data-lang="en" lang="en">
 <h1 id="en">English</h1>
-<p><strong>Last updated:</strong> 2026-10-24</p>
+<p><strong>Last updated:</strong> 2026-10-27</p>
 <h2>1. Who we are</h2>
-<p>"Frostforge" (placeholder name) is a mobile game. The data controller is the Frostforge developer, Anderson Fantin.
+<p>"Frostforge" (placeholder name) is a mobile game for Android (Google Play) and iOS (App Store; TestFlight while in testing).
+The data controller is the Frostforge developer, Anderson Fantin.
 Contact for privacy requests: playfrostforge@gmail.com. The game is for players aged 16 and over.</p>
 <h2>2. What we collect and why</h2>
 <div class="table"><table>
@@ -50,9 +51,15 @@ Contact for privacy requests: playfrostforge@gmail.com. The game is for players 
 <td>Contract (providing the game)</td>
 </tr>
 <tr>
-<td>Game state: base layout, resources, research, heroes, troops, tutorial progress, timestamps</td>
+<td>Game state: base layout, resources, research, heroes, troops, tutorial progress, world map position and marches, timestamps, your HUD layout choices</td>
 <td>While playing</td>
 <td>Run the game on our server (the server is authoritative)</td>
+<td>Contract</td>
+</tr>
+<tr>
+<td>Play session: a random session id, the platform (Android, iOS or web) and the start time of the device you play on</td>
+<td>When you open the game</td>
+<td>Keep one active device per account, so two devices never overwrite each other</td>
 <td>Contract</td>
 </tr>
 <tr>
@@ -102,15 +109,30 @@ Contact for privacy requests: playfrostforge@gmail.com. The game is for players 
 <p>We do <strong>not</strong> sell your data, show third-party ads, or use your data for profiling. We do not knowingly collect
 data from children under 16.</p>
 <p>Usage statistics are stored as daily totals per player (not one record per action), contain no free text, advertising
-id or device id, and nothing is sent until you choose "Allow". Native crash reports come from Google Play (Android vitals).</p>
-<p><strong>Planned (not collected yet):</strong> in-app purchase receipts. Before they start, this policy will be updated and, where required, we will ask for consent.</p>
+id or device id, and nothing is sent until you choose "Allow". The game has no crash-reporting SDK. Native crash reports
+come from Google Play (Android vitals) on Android, and on iPhone from Apple, only if you chose to share analytics with app
+developers in your device settings (or send a crash report from TestFlight).</p>
+<p>Notifications are scheduled on your device by the game itself; no push service receives your data.</p>
+<p>Test builds (Google Play testing tracks and TestFlight) that use our test server also store the e-mail address of the
+Google or Apple account you sign in with, only to recognise registered testers. The public game never asks for it.</p>
+<p><strong>Planned (not collected yet):</strong></p>
+<ul>
+<li>In-app purchases (Google Play on Android, the App Store on iPhone; none can be made today). When they start, Google or
+  Apple handles the payment and we receive and keep a record of each purchase: store, product, order or transaction id,
+  what was credited to your account and any refund. We never receive your card or payment details. This policy will be
+  updated with how long these records are kept before purchases open.</li>
+<li>Apple App Attest on iPhone, the same one-time check as Play Integrity on Android when a new account first opens its base.</li>
+</ul>
 <h2>3. Who receives your data</h2>
 <ul>
-<li><strong>Amazon Web Services</strong> (hosting, database, logs, sign-in via Amazon Cognito, email notifications, private storage of support request images and their automatic moderation via Amazon Rekognition). Processor.</li>
-<li><strong>Google</strong> (Google sign-in if you link; Play Integrity; Google Play for distribution and, in future, payments).</li>
+<li><strong>Amazon Web Services</strong> (hosting, database, logs, sign-in via Amazon Cognito, private storage of support request images and their automatic moderation via Amazon Rekognition). Processor.</li>
+<li><strong>Google</strong> (Sign in with Google; Play Integrity on Android; Google Play for distribution, in-app updates and, when they start, payments).</li>
+<li><strong>Apple</strong> (Sign in with Apple; the App Store and TestFlight for distribution on iPhone and, when they start, payments).</li>
 <li><strong>GitHub, Inc.</strong> (United States), a service provider that hosts our request-tracking system. The text of your support requests and replies, and your support code, are processed there only to handle your request. Not used for any other purpose. Processor.</li>
 <li><strong>Anthropic, PBC</strong> (United States), provider of the AI tools that help our team read, sort and draft answers to support requests. It receives the content of support requests, including attached images, only for that purpose. Processor.</li>
 <li>Support request images are never posted on GitHub.</li>
+<li><strong>Other players</strong> on the same world map see your base's position, your marches and the resource nodes you hold, under a
+  code that is not your account id. No name, e-mail or Google/Apple identifier is shown.</li>
 <li>Nobody else. We may disclose data if the law requires it.</li>
 </ul>
 <h2>4. Where data is stored</h2>
@@ -141,16 +163,22 @@ Agreement, which includes the standard contractual clauses (GDPR Chapter V; LGPD
 </ul>
 <h2>6. Your rights and how to delete your data</h2>
 <p>Under GDPR (EU/UK) and LGPD (Brazil) you may ask to access, correct, port, or delete your data, object to processing,
-and withdraw consent at any time. You can also complain to your data protection authority (in Brazil, the ANPD).
-- <strong>Delete everything yourself:</strong> in the game open Menu -&gt; Delete account. It disables your account at once and permanently
+and withdraw consent at any time. You can also complain to your data protection authority (in Brazil, the ANPD).</p>
+<ul>
+<li><strong>Delete everything yourself:</strong> in the game open Menu -&gt; Delete account. It disables your account at once and permanently
   deletes your save, your link to Google/Apple, your sign-in record, your feedback and your support requests (and the GitHub
   comments that hold your support request text) 30 days later, automatically. Sign in again within the 30 days and tap
   Restore to cancel. After that it cannot be undone. A closed request record without your text stays on GitHub (see section 5).
-- <strong>No app installed?</strong> Open <a href="https://agspf94.github.io/frostforge-legal/delete-account.html">https://agspf94.github.io/frostforge-legal/delete-account.html</a>, sign in with Google or Apple, and request deletion there.
-- <strong>Access, correction or portability requests:</strong> email playfrostforge@gmail.com. We answer within 30 days. We may need details such as your support code (shown on the Support screen), the approximate time of play or a feedback id to
-  find your data, since accounts have no name or email. You do not need to email us to delete your data.
-- If you linked Google, unlinking or deleting on Google's side does not delete the game save; use Delete account (30-day window above).
-- Your account is your Google or Apple sign-in: on a new device, sign in with the same account to get your save back.</p>
+  If your account uses Sign in with Apple, we also ask Apple to revoke the game's access to your Apple account.</li>
+<li><strong>No app installed?</strong> Open <a href="https://agspf94.github.io/frostforge-legal/delete-account.html">https://agspf94.github.io/frostforge-legal/delete-account.html</a>, sign in with the same Google or Apple account, and request deletion (or restore) there. It works the same way (30 days, then permanent).</li>
+<li><strong>Access, correction or portability requests:</strong> email playfrostforge@gmail.com. We answer within 30 days. We may need details such as your support code (shown on the Support screen), the approximate time of play or a feedback id to
+  find your data, since accounts have no name or email. You do not need to email us to delete your data.</li>
+<li>Removing the game's access in your Google or Apple account settings, or deleting that Google or Apple account, does not delete the game save; use Delete account (30-day window above).</li>
+<li>Your account is your Google or Apple sign-in: on a new device, sign in with the same account to get your save back.</li>
+<li><strong>Linking Google and Apple:</strong> in Settings you can link both to one game account. If the other sign-in already has its own
+  base, you choose which account to keep; progress cannot be combined. The account you did not keep is disabled and
+  permanently deleted 30 days later, like Delete account. If you chose the wrong one, email playfrostforge@gmail.com before then.</li>
+</ul>
 <h2>7. Security</h2>
 <p>Data is encrypted in transit (HTTPS) and at rest (AWS-managed encryption). Access to the backend is limited to the
 developer through AWS IAM. No system is perfectly secure; we will notify authorities and affected players of
@@ -161,9 +189,10 @@ breaches as the law requires.</p>
 <hr class="sep">
 <section data-lang="pt-br" lang="pt-BR">
 <h1 id="pt-br">Português (Brasil)</h1>
-<p><strong>Última atualização:</strong> 2026-10-24</p>
+<p><strong>Última atualização:</strong> 2026-10-27</p>
 <h2>1. Quem somos</h2>
-<p>"Frostforge" (nome provisório) é um jogo para celular. O controlador dos dados é the Frostforge developer, Anderson Fantin.
+<p>"Frostforge" (nome provisório) é um jogo para celular para Android (Google Play) e iOS (App Store; TestFlight durante os testes).
+O controlador dos dados é the Frostforge developer, Anderson Fantin.
 Contato para pedidos de privacidade (encarregado/DPO): playfrostforge@gmail.com. O jogo é para maiores de 16 anos.</p>
 <h2>2. O que coletamos e por quê</h2>
 <div class="table"><table>
@@ -183,9 +212,15 @@ Contato para pedidos de privacidade (encarregado/DPO): playfrostforge@gmail.com.
 <td>Execução de contrato</td>
 </tr>
 <tr>
-<td>Estado do jogo: base, recursos, pesquisas, heróis, tropas, tutorial, horários</td>
+<td>Estado do jogo: base, recursos, pesquisas, heróis, tropas, tutorial, posição e marchas no mapa-múndi, horários, suas escolhas de layout do HUD</td>
 <td>Durante o jogo</td>
 <td>Executar o jogo em nosso servidor (o servidor é a autoridade)</td>
+<td>Execução de contrato</td>
+</tr>
+<tr>
+<td>Sessão de jogo: um id de sessão aleatório, a plataforma (Android, iOS ou web) e o horário de início do aparelho em que você joga</td>
+<td>Ao abrir o jogo</td>
+<td>Manter um único aparelho ativo por conta, para que dois aparelhos nunca sobrescrevam um ao outro</td>
 <td>Execução de contrato</td>
 </tr>
 <tr>
@@ -235,15 +270,30 @@ Contato para pedidos de privacidade (encarregado/DPO): playfrostforge@gmail.com.
 <p><strong>Não</strong> vendemos seus dados, não exibimos anúncios de terceiros e não fazemos perfilamento. Não coletamos
 intencionalmente dados de menores de 16 anos.</p>
 <p>As estatísticas de uso são guardadas como totais diários por jogador (não um registro por ação), não contêm texto livre,
-id de publicidade nem id do aparelho, e nada é enviado até você escolher "Permitir". Falhas nativas vêm do Google Play (Android vitals).</p>
-<p><strong>Planejado (ainda não coletado):</strong> comprovantes de compras no app. Antes disso atualizaremos esta política e, quando exigido, pediremos consentimento.</p>
+id de publicidade nem id do aparelho, e nada é enviado até você escolher "Permitir". O jogo não tem SDK de relatório de
+falhas. Os relatórios de falhas nativas vêm do Google Play (Android vitals) no Android e, no iPhone, da Apple, somente se
+você escolheu compartilhar análises com desenvolvedores de apps nos ajustes do aparelho (ou enviar um relatório de falha pelo TestFlight).</p>
+<p>As notificações são agendadas no seu aparelho pelo próprio jogo; nenhum serviço de push recebe seus dados.</p>
+<p>Versões de teste (faixas de teste do Google Play e TestFlight) que usam nosso servidor de testes também guardam o e-mail
+da conta Google ou Apple com que você entra, somente para reconhecer testadores cadastrados. O jogo público nunca pede o e-mail.</p>
+<p><strong>Planejado (ainda não coletado):</strong></p>
+<ul>
+<li>Compras no app (Google Play no Android, App Store no iPhone; nenhuma compra é possível hoje). Quando começarem, o Google
+  ou a Apple cuidam do pagamento e nós recebemos e guardamos um registro de cada compra: loja, produto, id do pedido ou da
+  transação, o que foi creditado na sua conta e eventuais reembolsos. Nunca recebemos dados do seu cartão ou pagamento.
+  Antes de as compras abrirem, esta política dirá por quanto tempo esses registros são guardados.</li>
+<li>Apple App Attest no iPhone, a mesma verificação única do Play Integrity no Android quando uma conta nova abre a base pela primeira vez.</li>
+</ul>
 <h2>3. Com quem compartilhamos</h2>
 <ul>
-<li><strong>Amazon Web Services</strong> (hospedagem, banco de dados, logs, login via Amazon Cognito, e-mails de notificação, armazenamento privado das imagens dos pedidos de suporte e sua moderação automática via Amazon Rekognition). Operador.</li>
-<li><strong>Google</strong> (login Google se você vincular; Play Integrity; Google Play para distribuição e, no futuro, pagamentos).</li>
+<li><strong>Amazon Web Services</strong> (hospedagem, banco de dados, logs, login via Amazon Cognito, armazenamento privado das imagens dos pedidos de suporte e sua moderação automática via Amazon Rekognition). Operador.</li>
+<li><strong>Google</strong> (Entrar com o Google; Play Integrity no Android; Google Play para distribuição, atualizações no app e, quando começarem, pagamentos).</li>
+<li><strong>Apple</strong> (Entrar com a Apple; App Store e TestFlight para distribuição no iPhone e, quando começarem, pagamentos).</li>
 <li><strong>GitHub, Inc.</strong> (Estados Unidos), prestador de serviço que hospeda nosso sistema de acompanhamento de pedidos. O texto dos seus pedidos de suporte e respostas, e seu código de suporte, são tratados lá somente para atender ao seu pedido. Nenhuma outra finalidade. Operador.</li>
 <li><strong>Anthropic, PBC</strong> (Estados Unidos), fornecedora das ferramentas de IA que ajudam nossa equipe a ler, organizar e redigir respostas aos pedidos de suporte. Recebe o conteúdo dos pedidos de suporte, incluindo imagens anexadas, somente para essa finalidade. Operador.</li>
 <li>As imagens dos pedidos de suporte nunca são publicadas no GitHub.</li>
+<li><strong>Outros jogadores</strong> no mesmo mapa-múndi veem a posição da sua base, suas marchas e os nós de recursos que você ocupa,
+  sob um código que não é o id da sua conta. Nenhum nome, e-mail ou identificador Google/Apple é mostrado.</li>
 <li>Ninguém mais. Podemos divulgar dados se a lei exigir.</li>
 </ul>
 <h2>4. Onde os dados ficam</h2>
@@ -275,16 +325,23 @@ ferramentas de IA da <strong>Anthropic, PBC</strong> (seção 3) tratam o conte�
 <h2>6. Seus direitos e como excluir seus dados</h2>
 <p>Pela LGPD (Brasil) e GDPR (UE/Reino Unido) você pode solicitar confirmação de tratamento, acesso, correção,
 portabilidade, anonimização/eliminação, informação sobre compartilhamento, oposição e revogação do consentimento a
-qualquer momento. Você também pode reclamar à autoridade de proteção de dados (no Brasil, a ANPD).
-- <strong>Excluir tudo por conta própria:</strong> no jogo, Menu -&gt; Excluir conta. Ela desativa sua conta na hora e exclui permanentemente
+qualquer momento. Você também pode reclamar à autoridade de proteção de dados (no Brasil, a ANPD).</p>
+<ul>
+<li><strong>Excluir tudo por conta própria:</strong> no jogo, Menu -&gt; Excluir conta. Ela desativa sua conta na hora e exclui permanentemente
   seu progresso, o vínculo com Google/Apple, seu registro de login, seus feedbacks e seus pedidos de suporte (e os comentários
   do GitHub com o texto dos seus pedidos de suporte) 30 dias depois, automaticamente. Entre de novo dentro dos 30 dias e
   toque em Restaurar para cancelar. Depois disso, não pode ser desfeito. Um registro encerrado do pedido, sem o seu texto, fica no GitHub (veja a seção 5).
-- <strong>Sem o app instalado?</strong> Abra <a href="https://agspf94.github.io/frostforge-legal/delete-account.html">https://agspf94.github.io/frostforge-legal/delete-account.html</a>, entre com Google ou Apple e peça a exclusão por lá.
-- <strong>Pedidos de acesso, correção ou portabilidade:</strong> escreva para playfrostforge@gmail.com. Respondemos em até 30 dias. Podemos pedir dados como seu código de suporte (exibido na tela de Suporte), o horário aproximado de jogo ou o id de um feedback para
-  localizar seus dados, pois as contas não têm nome nem e-mail. Você não precisa nos escrever para excluir seus dados.
-- Se você vinculou o Google, desvincular ou excluir no Google não apaga o progresso do jogo; use Excluir conta (janela de 30 dias acima).
-- Sua conta é o seu login do Google ou da Apple: num aparelho novo, entre com a mesma conta para recuperar seu progresso.</p>
+  Se sua conta usa Entrar com a Apple, também pedimos à Apple que revogue o acesso do jogo à sua conta Apple.</li>
+<li><strong>Sem o app instalado?</strong> Abra <a href="https://agspf94.github.io/frostforge-legal/delete-account.html">https://agspf94.github.io/frostforge-legal/delete-account.html</a>, entre com a mesma conta Google ou Apple e peça a exclusão (ou a restauração) por lá. Funciona do mesmo jeito (30 dias, depois definitivo).</li>
+<li><strong>Pedidos de acesso, correção ou portabilidade:</strong> escreva para playfrostforge@gmail.com. Respondemos em até 30 dias. Podemos pedir dados como seu código de suporte (exibido na tela de Suporte), o horário aproximado de jogo ou o id de um feedback para
+  localizar seus dados, pois as contas não têm nome nem e-mail. Você não precisa nos escrever para excluir seus dados.</li>
+<li>Remover o acesso do jogo nas configurações da sua conta Google ou Apple, ou excluir essa conta Google ou Apple, não apaga o progresso do jogo; use Excluir conta (janela de 30 dias acima).</li>
+<li>Sua conta é o seu login do Google ou da Apple: num aparelho novo, entre com a mesma conta para recuperar seu progresso.</li>
+<li><strong>Vincular Google e Apple:</strong> em Configurações você pode vincular os dois a uma única conta do jogo. Se o outro login já
+  tiver uma base própria, você escolhe qual conta manter; o progresso não pode ser combinado. A conta que você não manteve
+  é desativada e excluída permanentemente 30 dias depois, como em Excluir conta. Se escolheu a errada, escreva para
+  playfrostforge@gmail.com antes disso.</li>
+</ul>
 <h2>7. Segurança</h2>
 <p>Os dados são criptografados em trânsito (HTTPS) e em repouso (criptografia gerenciada pela AWS). O acesso ao backend
 é restrito ao desenvolvedor via AWS IAM. Nenhum sistema é totalmente seguro; comunicaremos incidentes à autoridade e
@@ -295,9 +352,10 @@ aos jogadores afetados conforme a lei.</p>
 <hr class="sep">
 <section data-lang="es" lang="es-419">
 <h1 id="es">Español (Latinoamérica)</h1>
-<p><strong>Última actualización:</strong> 2026-10-24</p>
+<p><strong>Última actualización:</strong> 2026-10-27</p>
 <h2>1. Quién somos</h2>
-<p>"Frostforge" (nombre provisional) es un juego para celular. El responsable del tratamiento de los datos es el desarrollador de Frostforge, Anderson Fantin.
+<p>"Frostforge" (nombre provisional) es un juego para celular para Android (Google Play) e iOS (App Store; TestFlight durante las pruebas).
+El responsable del tratamiento de los datos es el desarrollador de Frostforge, Anderson Fantin.
 Contacto para solicitudes de privacidad: playfrostforge@gmail.com. El juego es para mayores de 16 años.</p>
 <h2>2. Qué recopilamos y por qué</h2>
 <div class="table"><table>
@@ -317,9 +375,15 @@ Contacto para solicitudes de privacidad: playfrostforge@gmail.com. El juego es p
 <td>Ejecución de contrato (proveer el juego)</td>
 </tr>
 <tr>
-<td>Estado del juego: base, recursos, investigación, héroes, tropas, avance del tutorial, marcas de tiempo</td>
+<td>Estado del juego: base, recursos, investigación, héroes, tropas, avance del tutorial, posición y marchas en el mapa mundial, marcas de tiempo, tus elecciones de diseño del HUD</td>
 <td>Mientras juegas</td>
 <td>Ejecutar el juego en nuestro servidor (el servidor es la autoridad)</td>
+<td>Ejecución de contrato</td>
+</tr>
+<tr>
+<td>Sesión de juego: un id de sesión aleatorio, la plataforma (Android, iOS o web) y la hora de inicio del dispositivo en el que juegas</td>
+<td>Al abrir el juego</td>
+<td>Mantener un solo dispositivo activo por cuenta, para que dos dispositivos nunca se sobrescriban</td>
 <td>Ejecución de contrato</td>
 </tr>
 <tr>
@@ -369,15 +433,30 @@ Contacto para solicitudes de privacidad: playfrostforge@gmail.com. El juego es p
 <p><strong>No</strong> vendemos tus datos, no mostramos anuncios de terceros y no los usamos para elaborar perfiles. No recopilamos
 a sabiendas datos de menores de 16 años.</p>
 <p>Las estadísticas de uso se guardan como totales diarios por jugador (no un registro por acción), no contienen texto libre,
-id de publicidad ni id del dispositivo, y no se envía nada hasta que eliges "Permitir". Los informes de fallos nativos provienen de Google Play (Android vitals).</p>
-<p><strong>Planificado (aún no se recopila):</strong> comprobantes de compras dentro de la app. Antes de que empiecen, actualizaremos esta política y, donde sea necesario, pediremos consentimiento.</p>
+id de publicidad ni id del dispositivo, y no se envía nada hasta que eliges "Permitir". El juego no tiene un SDK de
+informes de fallos. Los informes de fallos nativos provienen de Google Play (Android vitals) en Android y, en iPhone, de
+Apple, solo si elegiste compartir análisis con los desarrolladores de apps en los ajustes del dispositivo (o enviar un informe de fallo desde TestFlight).</p>
+<p>Las notificaciones las programa el propio juego en tu dispositivo; ningún servicio de notificaciones push recibe tus datos.</p>
+<p>Las versiones de prueba (canales de prueba de Google Play y TestFlight) que usan nuestro servidor de pruebas también guardan
+el correo de la cuenta de Google o Apple con la que inicias sesión, solo para reconocer a los testers registrados. El juego público nunca lo pide.</p>
+<p><strong>Planificado (aún no se recopila):</strong></p>
+<ul>
+<li>Compras dentro de la app (Google Play en Android, App Store en iPhone; hoy no se puede comprar nada). Cuando empiecen,
+  Google o Apple se encargan del pago y nosotros recibimos y conservamos un registro de cada compra: tienda, producto, id del
+  pedido o de la transacción, lo que se acreditó en tu cuenta y los reembolsos. Nunca recibimos los datos de tu tarjeta o de pago.
+  Antes de que se abran las compras, esta política indicará cuánto tiempo se conservan esos registros.</li>
+<li>Apple App Attest en iPhone, la misma verificación única que Play Integrity en Android cuando una cuenta nueva abre su base por primera vez.</li>
+</ul>
 <h2>3. Quién recibe tus datos</h2>
 <ul>
-<li><strong>Amazon Web Services</strong> (alojamiento, base de datos, registros, inicio de sesión mediante Amazon Cognito, notificaciones por correo, almacenamiento privado de las imágenes de las solicitudes de soporte y su moderación automática mediante Amazon Rekognition). Encargado del tratamiento.</li>
-<li><strong>Google</strong> (inicio de sesión con Google si vinculas; Play Integrity; Google Play para distribución y, en el futuro, pagos).</li>
+<li><strong>Amazon Web Services</strong> (alojamiento, base de datos, registros, inicio de sesión mediante Amazon Cognito, almacenamiento privado de las imágenes de las solicitudes de soporte y su moderación automática mediante Amazon Rekognition). Encargado del tratamiento.</li>
+<li><strong>Google</strong> (Iniciar sesión con Google; Play Integrity en Android; Google Play para distribución, actualizaciones dentro de la app y, cuando empiecen, pagos).</li>
+<li><strong>Apple</strong> (Iniciar sesión con Apple; App Store y TestFlight para distribución en iPhone y, cuando empiecen, pagos).</li>
 <li><strong>GitHub, Inc.</strong> (Estados Unidos), proveedor de servicios que aloja nuestro sistema de seguimiento de solicitudes. El texto de tus solicitudes de soporte y respuestas, y tu código de soporte, se procesan allí solo para atender tu solicitud. No se usan para ninguna otra finalidad. Encargado del tratamiento.</li>
 <li><strong>Anthropic, PBC</strong> (Estados Unidos), proveedora de las herramientas de IA que ayudan a nuestro equipo a leer, clasificar y redactar respuestas a las solicitudes de soporte. Recibe el contenido de las solicitudes de soporte, incluidas las imágenes adjuntas, solo para esa finalidad. Encargado del tratamiento.</li>
 <li>Las imágenes de las solicitudes de soporte nunca se publican en GitHub.</li>
+<li><strong>Otros jugadores</strong> del mismo mapa mundial ven la posición de tu base, tus marchas y los nodos de recursos que ocupas,
+  con un código que no es el id de tu cuenta. No se muestra ningún nombre, correo ni identificador de Google/Apple.</li>
 <li>Nadie más. Podemos divulgar datos si la ley lo exige.</li>
 </ul>
 <h2>4. Dónde se almacenan los datos</h2>
@@ -408,16 +487,23 @@ de Datos de GitHub, que incluye las cláusulas contractuales tipo (GDPR Capítul
 </ul>
 <h2>6. Tus derechos y cómo eliminar tus datos</h2>
 <p>Según el GDPR (UE/Reino Unido) y la LGPD (Brasil) puedes solicitar acceso, rectificación, portabilidad o eliminación de tus datos, oponerte al tratamiento
-y retirar tu consentimiento en cualquier momento. También puedes presentar una queja ante tu autoridad de protección de datos (en Brasil, la ANPD).
-- <strong>Elimina todo por tu cuenta:</strong> en el juego abre Menú -&gt; Eliminar cuenta. Desactiva tu cuenta de inmediato y elimina de forma
+y retirar tu consentimiento en cualquier momento. También puedes presentar una queja ante tu autoridad de protección de datos (en Brasil, la ANPD).</p>
+<ul>
+<li><strong>Elimina todo por tu cuenta:</strong> en el juego abre Menú -&gt; Eliminar cuenta. Desactiva tu cuenta de inmediato y elimina de forma
   permanente tu progreso, tu vínculo con Google/Apple, tu registro de inicio de sesión, tus comentarios y tus solicitudes de
   soporte (y los comentarios de GitHub que contienen el texto de tus solicitudes de soporte) 30 días después, automáticamente.
   Inicia sesión de nuevo dentro de los 30 días y toca Restaurar para cancelar. Después no se puede deshacer. Un registro cerrado de la solicitud sin tu texto permanece en GitHub (ver sección 5).
-- <strong>¿Sin la app instalada?</strong> Abre <a href="https://agspf94.github.io/frostforge-legal/delete-account.html">https://agspf94.github.io/frostforge-legal/delete-account.html</a>, inicia sesión con Google o Apple y solicita la eliminación allí.
-- <strong>Solicitudes de acceso, rectificación o portabilidad:</strong> escribe a playfrostforge@gmail.com. Respondemos en un plazo de 30 días. Es posible que necesitemos datos como tu código de soporte (se muestra en la pantalla de Soporte), la hora aproximada de juego o el id de un comentario para
-  encontrar tus datos, ya que las cuentas no tienen nombre ni correo. No necesitas escribirnos para eliminar tus datos.
-- Si vinculaste Google, desvincular o eliminar del lado de Google no elimina el progreso del juego; usa Eliminar cuenta (ventana de 30 días arriba).
-- Tu cuenta es tu inicio de sesión de Google o Apple: en un dispositivo nuevo, inicia sesión con la misma cuenta para recuperar tu progreso.</p>
+  Si tu cuenta usa Iniciar sesión con Apple, también le pedimos a Apple que revoque el acceso del juego a tu cuenta de Apple.</li>
+<li><strong>¿Sin la app instalada?</strong> Abre <a href="https://agspf94.github.io/frostforge-legal/delete-account.html">https://agspf94.github.io/frostforge-legal/delete-account.html</a>, inicia sesión con la misma cuenta de Google o Apple y solicita la eliminación (o la restauración) allí. Funciona igual (30 días, luego definitiva).</li>
+<li><strong>Solicitudes de acceso, rectificación o portabilidad:</strong> escribe a playfrostforge@gmail.com. Respondemos en un plazo de 30 días. Es posible que necesitemos datos como tu código de soporte (se muestra en la pantalla de Soporte), la hora aproximada de juego o el id de un comentario para
+  encontrar tus datos, ya que las cuentas no tienen nombre ni correo. No necesitas escribirnos para eliminar tus datos.</li>
+<li>Quitar el acceso del juego en los ajustes de tu cuenta de Google o Apple, o eliminar esa cuenta de Google o Apple, no elimina el progreso del juego; usa Eliminar cuenta (ventana de 30 días arriba).</li>
+<li>Tu cuenta es tu inicio de sesión de Google o Apple: en un dispositivo nuevo, inicia sesión con la misma cuenta para recuperar tu progreso.</li>
+<li><strong>Vincular Google y Apple:</strong> en Ajustes puedes vincular ambos a una sola cuenta del juego. Si el otro inicio de sesión ya
+  tiene su propia base, eliges qué cuenta conservar; el progreso no se puede combinar. La cuenta que no conservaste se
+  desactiva y se elimina de forma permanente 30 días después, como con Eliminar cuenta. Si elegiste la equivocada,
+  escribe a playfrostforge@gmail.com antes de ese plazo.</li>
+</ul>
 <h2>7. Seguridad</h2>
 <p>Los datos se cifran en tránsito (HTTPS) y en reposo (cifrado administrado por AWS). El acceso al backend está limitado al
 desarrollador mediante AWS IAM. Ningún sistema es perfectamente seguro; notificaremos a las autoridades y a los jugadores afectados
