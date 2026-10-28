@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Frostforge</title><style>
+<title>Frostforge: factory strategy game for Android and iOS</title><link rel="icon" type="image/png" href="assets/favicon.png"><style>
 :root{--bg:#f7f8fa;--fg:#1c2330;--muted:#5b6575;--card:#fff;--line:#dde2ea;--accent:#d9621f}
 @media (prefers-color-scheme:dark){:root{--bg:#10141b;--fg:#e6e9ef;--muted:#9aa4b4;--card:#171c25;--line:#2a3140;--accent:#ff8a3d}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -21,47 +21,54 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 .js .langs{display:flex}.js .nojs-langs{display:none}
 .js section[data-lang]:not(.active),.js hr.sep{display:none}
 .js section[data-lang]>h1:first-child{margin-top:16px}
+header .brand{display:flex;align-items:center;gap:10px}header .brand img{width:32px;height:32px;border-radius:8px}
+.hero{text-align:center;padding:8px 0 4px}.hero img{width:112px;height:112px;border-radius:24px}
+.hero h1{margin:12px 0 4px;font-size:2.2rem}.hero p{margin:6px auto;max-width:36em}
+.badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0}
+.badge{display:inline-flex;flex-direction:column;align-items:flex-start;min-width:200px;padding:8px 18px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--muted)}
+.badge small{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}.badge strong{color:var(--fg);font-size:1.05rem}
+.shots{display:flex;gap:12px;overflow-x:auto;padding:4px 0 12px;scroll-snap-type:x mandatory;justify-content:center}
+.shots img{height:min(480px,70vw);width:auto;border-radius:12px;border:1px solid var(--line);scroll-snap-align:center}
+@media (max-width:640px){.shots{justify-content:flex-start}}
+ul.feat{padding-left:20px}ul.links{list-style:none;padding:0;display:flex;gap:8px 20px;flex-wrap:wrap}
 </style>
 <script>document.documentElement.classList.add('js')</script></head>
-<body><main><header><strong>Frostforge</strong><nav><a href="./" data-href="./">Home</a><a href="privacy-policy.html" data-href="privacy-policy.html">Privacy</a><a href="delete-account.html" data-href="delete-account.html">Delete account</a></nav></header>
+<body><main><header><span class="brand"><img src="assets/logo.png" alt="" width="32" height="32"><strong>Frostforge</strong></span><nav><a href="./" data-href="./">Home</a><a href="privacy-policy.html" data-href="privacy-policy.html">Privacy</a><a href="delete-account.html" data-href="delete-account.html">Delete account</a><a href="credits.html" data-href="credits.html">Credits</a></nav></header>
 <div class="langs" role="group" aria-label="Language / Idioma"><button type="button" data-lang="en" lang="en" aria-pressed="true"><span aria-hidden="true">🇺🇸</span> EN</button><button type="button" data-lang="pt-br" lang="pt-BR" aria-pressed="false"><span aria-hidden="true">🇧🇷</span> PT-BR</button><button type="button" data-lang="es" lang="es-419" aria-pressed="false"><span aria-hidden="true">🇪🇸</span> ES</button></div>
 <p class="nojs-langs"><a href="#en" lang="en">EN</a><a href="#pt-br" lang="pt-BR">PT-BR</a><a href="#es" lang="es-419">ES</a></p>
 <section data-lang="en" lang="en">
-<h1 id="en">Frostforge</h1>
-<p>A factory-building strategy game for Android and iOS (iPhone), in development. Free to play, no ads.
-For players aged 16 and over; sign in with Google or Apple to play.</p>
-<ul>
-<li><a href="privacy-policy.html">Privacy Policy</a></li>
-<li><a href="delete-account.html">Delete your account and data</a></li>
-<li>Support: <a href="mailto:playfrostforge@gmail.com">playfrostforge@gmail.com</a></li>
-</ul>
+<div class="hero"><img src="assets/logo.png" alt="" width="112" height="112">
+<h1>Frostforge</h1><p><strong>A factory-building strategy game for Android and iOS (iPhone), in development.</strong></p><p>Free to play, no ads. For players aged 16 and over; sign in with Google or Apple to play.</p>
+<div class="badges"><span class="badge"><small>Coming soon</small><strong>Google Play</strong></span>
+<span class="badge"><small>Coming soon</small><strong>App Store</strong></span></div></div>
+<h2>The game</h2><ul class="feat"><li>Build a factory on a frozen planet: mine ore, smelt it into plates and parts, and keep the Heat Core burning.</li><li>Research new technology, recruit heroes and train troops.</li><li>Explore the world map and gather rare resources.</li></ul>
+<h2>Screenshots</h2><div class="shots"><img src="assets/shot-base.jpg" alt="The factory base" width="405" height="720" loading="lazy"><img src="assets/shot-heroes.jpg" alt="Heroes" width="405" height="720" loading="lazy"><img src="assets/shot-map.jpg" alt="The world map" width="405" height="720" loading="lazy"></div><p><small>Screenshots are from a development build and may change.</small></p>
+<h2>Links</h2><ul class="links"><li><a href="privacy-policy.html">Privacy policy</a></li><li><a href="delete-account.html">Delete account</a></li><li><a href="credits.html">Credits</a></li><li>Support: <a href="mailto:playfrostforge@gmail.com">playfrostforge@gmail.com</a></li></ul>
 </section>
 <hr class="sep">
 <section data-lang="pt-br" lang="pt-BR">
-<h1 id="pt-br">Frostforge</h1>
-<p>Um jogo de estratégia e construção de fábricas para Android e iOS (iPhone), em desenvolvimento. Gratuito, sem anúncios.
-Para maiores de 16 anos; entre com Google ou Apple para jogar.</p>
-<ul>
-<li><a href="privacy-policy.html#pt-br">Política de Privacidade</a></li>
-<li><a href="delete-account.html#pt-br">Excluir conta e dados</a></li>
-<li>Suporte: <a href="mailto:playfrostforge@gmail.com">playfrostforge@gmail.com</a></li>
-</ul>
+<div class="hero"><img src="assets/logo.png" alt="" width="112" height="112">
+<h1>Frostforge</h1><p><strong>Um jogo de estratégia e construção de fábricas para Android e iOS (iPhone), em desenvolvimento.</strong></p><p>Gratuito, sem anúncios. Para maiores de 16 anos; entre com Google ou Apple para jogar.</p>
+<div class="badges"><span class="badge"><small>Em breve</small><strong>Google Play</strong></span>
+<span class="badge"><small>Em breve</small><strong>App Store</strong></span></div></div>
+<h2>O jogo</h2><ul class="feat"><li>Construa uma fábrica num planeta congelado: extraia minério, funda em placas e peças e mantenha o Núcleo de Calor aceso.</li><li>Pesquise tecnologias, recrute heróis e treine tropas.</li><li>Explore o mapa-múndi e colete recursos raros.</li></ul>
+<h2>Capturas de tela</h2><div class="shots"><img src="assets/shot-base.jpg" alt="A base da fábrica" width="405" height="720" loading="lazy"><img src="assets/shot-heroes.jpg" alt="Heróis" width="405" height="720" loading="lazy"><img src="assets/shot-map.jpg" alt="O mapa-múndi" width="405" height="720" loading="lazy"></div><p><small>As capturas são de uma versão em desenvolvimento e podem mudar.</small></p>
+<h2>Links</h2><ul class="links"><li><a href="privacy-policy.html#pt-br">Política de Privacidade</a></li><li><a href="delete-account.html#pt-br">Excluir conta</a></li><li><a href="credits.html#pt-br">Créditos</a></li><li>Suporte: <a href="mailto:playfrostforge@gmail.com">playfrostforge@gmail.com</a></li></ul>
 </section>
 <hr class="sep">
 <section data-lang="es" lang="es-419">
-<h1 id="es">Frostforge</h1>
-<p>Un juego de estrategia y construcción de fábricas para Android e iOS (iPhone), en desarrollo. Gratis, sin anuncios.
-Para mayores de 16 años; inicia sesión con Google o Apple para jugar.</p>
-<ul>
-<li><a href="privacy-policy.html#es">Política de Privacidad</a></li>
-<li><a href="delete-account.html#es">Eliminar cuenta y datos</a></li>
-<li>Soporte: <a href="mailto:playfrostforge@gmail.com">playfrostforge@gmail.com</a></li>
-</ul>
+<div class="hero"><img src="assets/logo.png" alt="" width="112" height="112">
+<h1>Frostforge</h1><p><strong>Un juego de estrategia y construcción de fábricas para Android e iOS (iPhone), en desarrollo.</strong></p><p>Gratis, sin anuncios. Para mayores de 16 años; inicia sesión con Google o Apple para jugar.</p>
+<div class="badges"><span class="badge"><small>Próximamente</small><strong>Google Play</strong></span>
+<span class="badge"><small>Próximamente</small><strong>App Store</strong></span></div></div>
+<h2>El juego</h2><ul class="feat"><li>Construye una fábrica en un planeta congelado: extrae mineral, fúndelo en placas y piezas y mantén encendido el Núcleo de Calor.</li><li>Investiga tecnologías, recluta héroes y entrena tropas.</li><li>Explora el mapa del mundo y recolecta recursos raros.</li></ul>
+<h2>Capturas de pantalla</h2><div class="shots"><img src="assets/shot-base.jpg" alt="La base de la fábrica" width="405" height="720" loading="lazy"><img src="assets/shot-heroes.jpg" alt="Héroes" width="405" height="720" loading="lazy"><img src="assets/shot-map.jpg" alt="El mapa del mundo" width="405" height="720" loading="lazy"></div><p><small>Las capturas son de una versión en desarrollo y pueden cambiar.</small></p>
+<h2>Enlaces</h2><ul class="links"><li><a href="privacy-policy.html#es">Política de Privacidad</a></li><li><a href="delete-account.html#es">Eliminar cuenta</a></li><li><a href="credits.html#es">Créditos</a></li><li>Soporte: <a href="mailto:playfrostforge@gmail.com">playfrostforge@gmail.com</a></li></ul>
 </section>
 </main>
 <script>
 (function(){
-  var ids=["en", "pt-br", "es"], langs={"en": "en", "pt-br": "pt-BR", "es": "es-419"}, titles={"en": "Frostforge", "pt-br": "Frostforge", "es": "Frostforge"}, nav={"en": ["Home", "Privacy", "Delete account"], "pt-br": ["Início", "Privacidade", "Excluir conta"], "es": ["Inicio", "Privacidad", "Eliminar cuenta"]}, KEY='frostforge-lang';
+  var ids=["en", "pt-br", "es"], langs={"en": "en", "pt-br": "pt-BR", "es": "es-419"}, titles={"en": "Frostforge: factory strategy game for Android and iOS", "pt-br": "Frostforge: jogo de estratégia de fábrica para Android e iOS", "es": "Frostforge: juego de estrategia de fábricas para Android e iOS"}, nav={"en": ["Home", "Privacy", "Delete account", "Credits"], "pt-br": ["Início", "Privacidade", "Excluir conta", "Créditos"], "es": ["Inicio", "Privacidad", "Eliminar cuenta", "Créditos"]}, KEY='frostforge-lang';
   function norm(v){
     if(!v) return null; v=String(v).toLowerCase();
     if(v.indexOf('pt')===0) return 'pt-br';

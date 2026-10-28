@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Frostforge Privacy Policy</title><style>
+<title>Frostforge Privacy Policy</title><link rel="icon" type="image/png" href="assets/favicon.png"><style>
 :root{--bg:#f7f8fa;--fg:#1c2330;--muted:#5b6575;--card:#fff;--line:#dde2ea;--accent:#d9621f}
 @media (prefers-color-scheme:dark){:root{--bg:#10141b;--fg:#e6e9ef;--muted:#9aa4b4;--card:#171c25;--line:#2a3140;--accent:#ff8a3d}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -21,9 +21,19 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
 .js .langs{display:flex}.js .nojs-langs{display:none}
 .js section[data-lang]:not(.active),.js hr.sep{display:none}
 .js section[data-lang]>h1:first-child{margin-top:16px}
+header .brand{display:flex;align-items:center;gap:10px}header .brand img{width:32px;height:32px;border-radius:8px}
+.hero{text-align:center;padding:8px 0 4px}.hero img{width:112px;height:112px;border-radius:24px}
+.hero h1{margin:12px 0 4px;font-size:2.2rem}.hero p{margin:6px auto;max-width:36em}
+.badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0}
+.badge{display:inline-flex;flex-direction:column;align-items:flex-start;min-width:200px;padding:8px 18px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--muted)}
+.badge small{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}.badge strong{color:var(--fg);font-size:1.05rem}
+.shots{display:flex;gap:12px;overflow-x:auto;padding:4px 0 12px;scroll-snap-type:x mandatory;justify-content:center}
+.shots img{height:min(480px,70vw);width:auto;border-radius:12px;border:1px solid var(--line);scroll-snap-align:center}
+@media (max-width:640px){.shots{justify-content:flex-start}}
+ul.feat{padding-left:20px}ul.links{list-style:none;padding:0;display:flex;gap:8px 20px;flex-wrap:wrap}
 </style>
 <script>document.documentElement.classList.add('js')</script></head>
-<body><main><header><strong>Frostforge</strong><nav><a href="./" data-href="./">Home</a><a href="privacy-policy.html" data-href="privacy-policy.html">Privacy</a><a href="delete-account.html" data-href="delete-account.html">Delete account</a></nav></header>
+<body><main><header><span class="brand"><img src="assets/logo.png" alt="" width="32" height="32"><strong>Frostforge</strong></span><nav><a href="./" data-href="./">Home</a><a href="privacy-policy.html" data-href="privacy-policy.html">Privacy</a><a href="delete-account.html" data-href="delete-account.html">Delete account</a><a href="credits.html" data-href="credits.html">Credits</a></nav></header>
 <div class="langs" role="group" aria-label="Language / Idioma"><button type="button" data-lang="en" lang="en" aria-pressed="true"><span aria-hidden="true">🇺🇸</span> EN</button><button type="button" data-lang="pt-br" lang="pt-BR" aria-pressed="false"><span aria-hidden="true">🇧🇷</span> PT-BR</button><button type="button" data-lang="es" lang="es-419" aria-pressed="false"><span aria-hidden="true">🇪🇸</span> ES</button></div>
 <p class="nojs-langs"><a href="#en" lang="en">EN</a><a href="#pt-br" lang="pt-BR">PT-BR</a><a href="#es" lang="es-419">ES</a></p>
 <section data-lang="en" lang="en">
@@ -514,7 +524,7 @@ de las brechas según lo exija la ley.</p>
 </main>
 <script>
 (function(){
-  var ids=["en", "pt-br", "es"], langs={"en": "en", "pt-br": "pt-BR", "es": "es-419"}, titles={"en": "Frostforge Privacy Policy", "pt-br": "Política de Privacidade do Frostforge", "es": "Política de Privacidad de Frostforge"}, nav={"en": ["Home", "Privacy", "Delete account"], "pt-br": ["Início", "Privacidade", "Excluir conta"], "es": ["Inicio", "Privacidad", "Eliminar cuenta"]}, KEY='frostforge-lang';
+  var ids=["en", "pt-br", "es"], langs={"en": "en", "pt-br": "pt-BR", "es": "es-419"}, titles={"en": "Frostforge Privacy Policy", "pt-br": "Política de Privacidade do Frostforge", "es": "Política de Privacidad de Frostforge"}, nav={"en": ["Home", "Privacy", "Delete account", "Credits"], "pt-br": ["Início", "Privacidade", "Excluir conta", "Créditos"], "es": ["Inicio", "Privacidad", "Eliminar cuenta", "Créditos"]}, KEY='frostforge-lang';
   function norm(v){
     if(!v) return null; v=String(v).toLowerCase();
     if(v.indexOf('pt')===0) return 'pt-br';
