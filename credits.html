@@ -27,9 +27,9 @@ header .brand{display:flex;align-items:center;gap:10px}header .brand img{width:3
 .badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0}
 .badge{display:inline-flex;flex-direction:column;align-items:flex-start;min-width:200px;padding:8px 18px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--muted)}
 .badge small{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}.badge strong{color:var(--fg);font-size:1.05rem}
-.shots{display:flex;gap:12px;overflow-x:auto;padding:4px 0 12px;scroll-snap-type:x mandatory;justify-content:center}
-.shots img{height:min(480px,70vw);width:auto;border-radius:12px;border:1px solid var(--line);scroll-snap-align:center}
-@media (max-width:640px){.shots{justify-content:flex-start}}
+.shots{display:flex;gap:12px;padding:4px 0 12px;justify-content:center}
+.shots img{flex:0 1 auto;min-width:0;max-width:calc(33.333% - 8px);height:auto;max-height:480px;aspect-ratio:9/16;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+@media (max-width:640px){.shots{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.shots::-webkit-scrollbar{display:none}.shots img{flex:none;max-width:none;height:min(480px,70vw);width:auto;scroll-snap-align:center}}
 ul.feat{padding-left:20px}ul.links{list-style:none;padding:0;display:flex;gap:8px 20px;flex-wrap:wrap}
 </style>
 <script>document.documentElement.classList.add('js')</script></head>
