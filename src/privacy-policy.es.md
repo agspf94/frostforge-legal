@@ -83,7 +83,7 @@ de Datos de GitHub, que incluye las cláusulas contractuales tipo (GDPR Capítul
 Según el GDPR (UE/Reino Unido) y la LGPD (Brasil) puedes solicitar acceso, rectificación, portabilidad o eliminación de tus datos, oponerte al tratamiento
 y retirar tu consentimiento en cualquier momento. También puedes presentar una queja ante tu autoridad de protección de datos (en Brasil, la ANPD).
 
-- **Elimina todo por tu cuenta:** en el juego abre Menú -> Eliminar cuenta. Desactiva tu cuenta de inmediato y elimina de forma
+- **Elimina todo por tu cuenta:** en el juego abre Menú -> Legal -> Eliminar cuenta. Desactiva tu cuenta de inmediato y elimina de forma
   permanente tu progreso, tu vínculo con Google/Apple, tu registro de inicio de sesión, tus comentarios y tus solicitudes de
   soporte (y los comentarios de GitHub que contienen el texto de tus solicitudes de soporte) 30 días después, automáticamente.
   Inicia sesión de nuevo dentro de los 30 días y toca Restaurar para cancelar. Después no se puede deshacer. Un registro cerrado de la solicitud sin tu texto permanece en GitHub (ver sección 5).
