@@ -3,7 +3,7 @@
 **Última actualización:** `[FECHA]`
 
 ## 1. Quién somos
-"Frostforge" (nombre provisional) es un juego para celular para Android (Google Play) e iOS (App Store; TestFlight durante las pruebas).
+"Frostforge" es un juego para celular para Android (Google Play) e iOS (App Store; TestFlight durante las pruebas).
 El responsable del tratamiento de los datos es `[NOMBRE LEGAL DEL RESPONSABLE]`.
 Contacto para solicitudes de privacidad: `[CORREO DE PRIVACIDAD]`. El juego es para mayores de 16 años.
 
