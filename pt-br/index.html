@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Frostforge: jogo de estratégia de fábrica para Android e iOS</title><meta name="description" content="Frostforge é um jogo gratuito de estratégia e construção de fábricas para Android e iOS: construa uma fábrica num planeta congelado, pesquise, recrute heróis e explore o mapa."><link rel="canonical" href="https://playfrostforge.com/pt-br/"><link rel="alternate" hreflang="en" href="https://playfrostforge.com/"><link rel="alternate" hreflang="pt-BR" href="https://playfrostforge.com/pt-br/"><link rel="alternate" hreflang="es-419" href="https://playfrostforge.com/es/"><link rel="alternate" hreflang="x-default" href="https://playfrostforge.com/"><meta property="og:type" content="website"><meta property="og:site_name" content="Frostforge"><meta property="og:title" content="Frostforge: jogo de estratégia de fábrica para Android e iOS"><meta property="og:description" content="Frostforge é um jogo gratuito de estratégia e construção de fábricas para Android e iOS: construa uma fábrica num planeta congelado, pesquise, recrute heróis e explore o mapa."><meta property="og:url" content="https://playfrostforge.com/pt-br/"><meta property="og:locale" content="pt_BR"><meta property="og:image" content="https://playfrostforge.com/assets/logo.png"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Frostforge: jogo de estratégia de fábrica para Android e iOS"><meta name="twitter:description" content="Frostforge é um jogo gratuito de estratégia e construção de fábricas para Android e iOS: construa uma fábrica num planeta congelado, pesquise, recrute heróis e explore o mapa."><meta name="twitter:image" content="https://playfrostforge.com/assets/logo.png"><link rel="icon" type="image/png" href="/assets/favicon.png"><style>
+:root{--bg:#f7f8fa;--fg:#1c2330;--muted:#5b6575;--card:#fff;--line:#dde2ea;--accent:#d9621f}
+@media (prefers-color-scheme:dark){:root{--bg:#10141b;--fg:#e6e9ef;--muted:#9aa4b4;--card:#171c25;--line:#2a3140;--accent:#ff8a3d}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:32px 16px 64px}
+header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
+header nav a{color:var(--muted);text-decoration:none;margin-left:12px}header strong{font-size:1.2rem}
+a{color:var(--accent)}h1{margin-top:40px}h2{margin-top:28px;font-size:1.15rem}
+.table{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem;background:var(--card)}
+th,td{border:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}th{background:var(--bg)}
+code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:0 4px;overflow-wrap:anywhere}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin:16px 0}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+.langs{display:none;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.langs button{font:inherit;font-size:.9rem;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer;min-height:36px}
+.langs button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);font-weight:600}
+.langs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.nojs-langs a{margin-right:10px}
+.langs.lang-links{display:flex}.lang-link{font-size:.9rem;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 12px;text-decoration:none;min-height:36px;display:inline-flex;align-items:center;gap:4px}
+.lang-link[aria-current="page"]{border-color:var(--accent);color:var(--accent);font-weight:600}
+.js .langs{display:flex}.js .nojs-langs{display:none}
+.js section[data-lang]:not(.active),.js hr.sep{display:none}
+.js section[data-lang]>h1:first-child{margin-top:16px}
+header .brand{display:flex;align-items:center;gap:10px}header .brand img{width:32px;height:32px;border-radius:8px}
+.hero{text-align:center;padding:8px 0 4px}.hero img{width:112px;height:112px;border-radius:24px}
+.hero h1{margin:12px 0 4px;font-size:2.2rem}.hero p{margin:6px auto;max-width:36em}
+.badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0}
+.badge{display:inline-flex;flex-direction:column;align-items:flex-start;min-width:200px;padding:8px 18px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--muted)}
+.badge small{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}.badge strong{color:var(--fg);font-size:1.05rem}
+.shots{display:flex;gap:12px;padding:4px 0 12px;justify-content:center}
+.shots img{flex:0 1 auto;min-width:0;max-width:calc(33.333% - 8px);height:auto;max-height:480px;aspect-ratio:9/16;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+@media (max-width:640px){.shots{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.shots::-webkit-scrollbar{display:none}.shots img{flex:none;max-width:none;height:min(480px,70vw);width:auto;scroll-snap-align:center}}
+ul.feat{padding-left:20px}ul.links{list-style:none;padding:0;display:flex;gap:8px 20px;flex-wrap:wrap}
+</style>
+</head>
+<body><main><header><span class="brand"><img src="/assets/logo.png" alt="" width="32" height="32"><strong>Frostforge</strong></span><nav><a href="/pt-br/">Início</a><a href="/pt-br/privacy-policy.html">Privacidade</a><a href="/delete-account.html">Excluir conta</a><a href="/pt-br/credits.html">Créditos</a></nav></header>
+<div class="langs lang-links" role="group" aria-label="Language / Idioma"><a class="lang-link" href="/" lang="en" hreflang="en"><span aria-hidden="true">🇺🇸</span> EN</a><a class="lang-link" href="/pt-br/" lang="pt-BR" hreflang="pt-BR" aria-current="page"><span aria-hidden="true">🇧🇷</span> PT-BR</a><a class="lang-link" href="/es/" lang="es-419" hreflang="es-419"><span aria-hidden="true">🇪🇸</span> ES</a></div>
+
+<section data-lang="pt-br" lang="pt-BR" class="active">
+<div class="hero"><img src="/assets/logo.png" alt="" width="112" height="112">
+<h1>Frostforge</h1><p><strong>Um jogo de estratégia e construção de fábricas para Android e iOS (iPhone), em desenvolvimento.</strong></p><p>Gratuito, sem anúncios. Para maiores de 16 anos; entre com Google ou Apple para jogar.</p>
+<div class="badges"><span class="badge"><small>Em breve</small><strong>Google Play</strong></span>
+<span class="badge"><small>Em breve</small><strong>App Store</strong></span></div></div>
+<h2>O jogo</h2><ul class="feat"><li>Construa uma fábrica num planeta congelado: extraia minério, funda em placas e peças e mantenha o Núcleo de Calor aceso.</li><li>Pesquise tecnologias, recrute heróis e treine tropas.</li><li>Explore o mapa-múndi e colete recursos raros.</li></ul>
+<h2>Capturas de tela</h2><div class="shots"><img src="/assets/shot-base.jpg" alt="A base da fábrica" width="405" height="720" loading="lazy"><img src="/assets/shot-heroes.jpg" alt="Heróis" width="405" height="720" loading="lazy"><img src="/assets/shot-map.jpg" alt="O mapa-múndi" width="405" height="720" loading="lazy"></div><p><small>As capturas são de uma versão em desenvolvimento e podem mudar.</small></p>
+<h2>Links</h2><ul class="links"><li><a href="/pt-br/privacy-policy.html">Política de Privacidade</a></li><li><a href="/delete-account.html">Excluir conta</a></li><li><a href="/pt-br/credits.html">Créditos</a></li><li>Suporte: <a href="mailto:playfrostforge@gmail.com">playfrostforge@gmail.com</a></li></ul>
+</section>
+</main>
+
+</body></html>
