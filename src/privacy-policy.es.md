@@ -39,7 +39,7 @@ el correo de la cuenta de Google o Apple con la que inicias sesión, solo para r
 - Compras dentro de la app (Google Play en Android, App Store en iPhone; hoy no se puede comprar nada). Cuando empiecen,
   Google o Apple se encargan del pago y nosotros recibimos y conservamos un registro de cada compra: tienda, producto, id del
   pedido o de la transacción, lo que se acreditó en tu cuenta y los reembolsos. Nunca recibimos los datos de tu tarjeta o de pago.
-  Antes de que se abran las compras, esta política indicará cuánto tiempo se conservan esos registros.
+  Conservamos cada registro durante 5 años (prueba fiscal y de consumo; base legal: obligación legal), ver la sección 5.
 - Apple App Attest en iPhone, la misma verificación única que Play Integrity en Android cuando una cuenta nueva abre su base por primera vez.
 
 ## 3. Quién recibe tus datos
@@ -75,8 +75,12 @@ de Datos de GitHub, que incluye las cláusulas contractuales tipo (GDPR Capítul
 - Estadísticas de uso: se eliminan automáticamente después de 120 días (o cuando la cuenta se elimina de forma permanente, 30 días después de que la elimines); el registro de tu
   elección (Permitir / No, gracias) y el día en que elegiste por primera vez se conservan hasta la eliminación permanente de la cuenta.
 - Registros técnicos: 30 días (configurado en AWS CloudWatch).
-- Cuando eliminas tu cuenta, queda desactivada durante 30 días (tus datos se conservan, congelados y fuera del juego, para que puedas restaurarla si fue un error o lo hizo otra persona). Pasados 30 días, todo se elimina automáticamente.
+- Cuando eliminas tu cuenta, queda desactivada durante 30 días (tus datos se conservan, congelados y fuera del juego, para que puedas restaurarla si fue un error o lo hizo otra persona). Pasados 30 días, todo se elimina automáticamente, salvo los registros de compra, que se conservan sin tu id de jugador (ver arriba).
 - Un breve marcador de eliminación (unas 2 horas) permanece después de la eliminación permanente para que una sesión antigua no pueda recrear la cuenta.
+- Registros de compra (cuando se abran las compras): 5 años desde la compra, después se eliminan automáticamente. Las leyes
+  fiscales y de consumo nos exigen conservar prueba de cada venta. Cuando tu cuenta se elimina de forma permanente, tu id de
+  jugador se quita de esos registros; queda la tienda, el producto, el id del pedido o de la transacción, fechas, lo que se acreditó y los reembolsos, sin nada que vincule el registro con tu cuenta
+  del juego. Estos registros son los únicos datos que se conservan tras la eliminación permanente.
 - Copias de seguridad: en producción, la recuperación a un punto en el tiempo de DynamoDB puede conservar datos eliminados en copias de seguridad hasta 35 días después de la eliminación permanente.
 
 ## 6. Tus derechos y cómo eliminar tus datos

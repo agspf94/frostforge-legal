@@ -38,7 +38,7 @@ ul.feat{padding-left:20px}ul.links{list-style:none;padding:0;display:flex;gap:8p
 <p class="nojs-langs"><a href="#en" lang="en">EN</a><a href="#pt-br" lang="pt-BR">PT-BR</a><a href="#es" lang="es-419">ES</a></p>
 <section data-lang="en" lang="en">
 <h1 id="en">English</h1>
-<p><strong>Last updated:</strong> 2026-10-29</p>
+<p><strong>Last updated:</strong> 2026-10-30</p>
 <h2>1. Who we are</h2>
 <p>"Frostforge" (placeholder name) is a mobile game for Android (Google Play) and iOS (App Store; TestFlight while in testing).
 The data controller is the Frostforge developer, Anderson Fantin.
@@ -129,8 +129,8 @@ Google or Apple account you sign in with, only to recognise registered testers. 
 <ul>
 <li>In-app purchases (Google Play on Android, the App Store on iPhone; none can be made today). When they start, Google or
   Apple handles the payment and we receive and keep a record of each purchase: store, product, order or transaction id,
-  what was credited to your account and any refund. We never receive your card or payment details. This policy will be
-  updated with how long these records are kept before purchases open.</li>
+  what was credited to your account and any refund. We never receive your card or payment details. We keep each record
+  for 5 years (tax and consumer-law evidence; legal basis: legal obligation), see section 5.</li>
 <li>Apple App Attest on iPhone, the same one-time check as Play Integrity on Android when a new account first opens its base.</li>
 </ul>
 <h2>3. Who receives your data</h2>
@@ -167,8 +167,13 @@ Agreement, which includes the standard contractual clauses (GDPR Chapter V; LGPD
 <li>Usage statistics: automatically deleted after 120 days (or when your account is permanently deleted, 30 days after you delete it); the record of your
   choice (Allow / No thanks) and the day you first chose are kept until the account is permanently deleted.</li>
 <li>Technical logs: 30 days (set in AWS CloudWatch).</li>
-<li>When you delete your account it is disabled for 30 days (your data is kept, frozen and out of the game, so you can restore it if the deletion was a mistake or someone else did it). After 30 days everything is deleted automatically.</li>
+<li>When you delete your account it is disabled for 30 days (your data is kept, frozen and out of the game, so you can restore it if the deletion was a mistake or someone else did it). After 30 days everything is deleted automatically, except purchase records, which are kept without your player id (see above).</li>
 <li>A short deletion marker (about 2 hours) is kept after the permanent deletion so a stale session cannot recreate the account.</li>
+<li>Purchase records (when purchases open): 5 years from the purchase, then deleted automatically. Tax and consumer law
+  require us to keep evidence of each sale. When your account is permanently deleted, your player id is removed from these
+  records; what stays is the store, product, order or transaction id, dates,
+  what was credited and any refund, with nothing that links the record to your game account. These records are the only
+  data kept after the permanent deletion.</li>
 <li>Backups: in production, DynamoDB point-in-time recovery may keep deleted data in backups for up to 35 days after the permanent deletion.</li>
 </ul>
 <h2>6. Your rights and how to delete your data</h2>
@@ -199,7 +204,7 @@ breaches as the law requires.</p>
 <hr class="sep">
 <section data-lang="pt-br" lang="pt-BR">
 <h1 id="pt-br">Português (Brasil)</h1>
-<p><strong>Última atualização:</strong> 2026-10-29</p>
+<p><strong>Última atualização:</strong> 2026-10-30</p>
 <h2>1. Quem somos</h2>
 <p>"Frostforge" (nome provisório) é um jogo para celular para Android (Google Play) e iOS (App Store; TestFlight durante os testes).
 O controlador dos dados é the Frostforge developer, Anderson Fantin.
@@ -291,7 +296,7 @@ da conta Google ou Apple com que você entra, somente para reconhecer testadores
 <li>Compras no app (Google Play no Android, App Store no iPhone; nenhuma compra é possível hoje). Quando começarem, o Google
   ou a Apple cuidam do pagamento e nós recebemos e guardamos um registro de cada compra: loja, produto, id do pedido ou da
   transação, o que foi creditado na sua conta e eventuais reembolsos. Nunca recebemos dados do seu cartão ou pagamento.
-  Antes de as compras abrirem, esta política dirá por quanto tempo esses registros são guardados.</li>
+  Guardamos cada registro por 5 anos (prova fiscal e de consumo; base legal: obrigação legal), veja a seção 5.</li>
 <li>Apple App Attest no iPhone, a mesma verificação única do Play Integrity no Android quando uma conta nova abre a base pela primeira vez.</li>
 </ul>
 <h2>3. Com quem compartilhamos</h2>
@@ -328,7 +333,11 @@ ferramentas de IA da <strong>Anthropic, PBC</strong> (seção 3) tratam o conte�
 <li>Estatísticas de uso: apagadas automaticamente após 120 dias (ou quando a conta for excluída permanentemente, 30 dias depois de você excluí-la); o registro da sua escolha
   (Permitir / Agora não) e o dia da primeira escolha ficam até a exclusão permanente da conta.</li>
 <li>Logs técnicos: 30 dias (configurado no AWS CloudWatch).</li>
-<li>Ao excluir a conta, ela fica desativada por 30 dias (seus dados são mantidos, congelados e fora do jogo, para que você possa restaurá-la se a exclusão foi um engano ou foi feita por outra pessoa). Depois de 30 dias, tudo é apagado automaticamente.</li>
+<li>Ao excluir a conta, ela fica desativada por 30 dias (seus dados são mantidos, congelados e fora do jogo, para que você possa restaurá-la se a exclusão foi um engano ou foi feita por outra pessoa). Depois de 30 dias, tudo é apagado automaticamente, exceto os registros de compra, que ficam guardados sem o seu id de jogador (veja acima).</li>
+<li>Registros de compra (quando as compras abrirem): 5 anos a partir da compra, depois excluídos automaticamente. As leis
+  fiscais e de defesa do consumidor exigem que guardemos prova de cada venda. Quando sua conta é excluída permanentemente,
+  seu id de jogador é removido desses registros; fica a loja, o produto, o id do pedido ou da transação, datas, o que foi creditado e eventuais reembolsos, sem nada que ligue o registro à sua conta no jogo.
+  Esses registros são os únicos dados guardados após a exclusão permanente.</li>
 <li>Backups: em produção, a recuperação pontual do DynamoDB pode manter dados excluídos em backups por até 35 dias após a exclusão permanente.</li>
 <li>Um marcador curto de exclusão (cerca de 2 horas) permanece após a exclusão permanente para que uma sessão antiga não recrie a conta.</li>
 </ul>
@@ -362,7 +371,7 @@ aos jogadores afetados conforme a lei.</p>
 <hr class="sep">
 <section data-lang="es" lang="es-419">
 <h1 id="es">Español (Latinoamérica)</h1>
-<p><strong>Última actualización:</strong> 2026-10-29</p>
+<p><strong>Última actualización:</strong> 2026-10-30</p>
 <h2>1. Quién somos</h2>
 <p>"Frostforge" (nombre provisional) es un juego para celular para Android (Google Play) e iOS (App Store; TestFlight durante las pruebas).
 El responsable del tratamiento de los datos es el desarrollador de Frostforge, Anderson Fantin.
@@ -454,7 +463,7 @@ el correo de la cuenta de Google o Apple con la que inicias sesión, solo para r
 <li>Compras dentro de la app (Google Play en Android, App Store en iPhone; hoy no se puede comprar nada). Cuando empiecen,
   Google o Apple se encargan del pago y nosotros recibimos y conservamos un registro de cada compra: tienda, producto, id del
   pedido o de la transacción, lo que se acreditó en tu cuenta y los reembolsos. Nunca recibimos los datos de tu tarjeta o de pago.
-  Antes de que se abran las compras, esta política indicará cuánto tiempo se conservan esos registros.</li>
+  Conservamos cada registro durante 5 años (prueba fiscal y de consumo; base legal: obligación legal), ver la sección 5.</li>
 <li>Apple App Attest en iPhone, la misma verificación única que Play Integrity en Android cuando una cuenta nueva abre su base por primera vez.</li>
 </ul>
 <h2>3. Quién recibe tus datos</h2>
@@ -491,8 +500,12 @@ de Datos de GitHub, que incluye las cláusulas contractuales tipo (GDPR Capítul
 <li>Estadísticas de uso: se eliminan automáticamente después de 120 días (o cuando la cuenta se elimina de forma permanente, 30 días después de que la elimines); el registro de tu
   elección (Permitir / No, gracias) y el día en que elegiste por primera vez se conservan hasta la eliminación permanente de la cuenta.</li>
 <li>Registros técnicos: 30 días (configurado en AWS CloudWatch).</li>
-<li>Cuando eliminas tu cuenta, queda desactivada durante 30 días (tus datos se conservan, congelados y fuera del juego, para que puedas restaurarla si fue un error o lo hizo otra persona). Pasados 30 días, todo se elimina automáticamente.</li>
+<li>Cuando eliminas tu cuenta, queda desactivada durante 30 días (tus datos se conservan, congelados y fuera del juego, para que puedas restaurarla si fue un error o lo hizo otra persona). Pasados 30 días, todo se elimina automáticamente, salvo los registros de compra, que se conservan sin tu id de jugador (ver arriba).</li>
 <li>Un breve marcador de eliminación (unas 2 horas) permanece después de la eliminación permanente para que una sesión antigua no pueda recrear la cuenta.</li>
+<li>Registros de compra (cuando se abran las compras): 5 años desde la compra, después se eliminan automáticamente. Las leyes
+  fiscales y de consumo nos exigen conservar prueba de cada venta. Cuando tu cuenta se elimina de forma permanente, tu id de
+  jugador se quita de esos registros; queda la tienda, el producto, el id del pedido o de la transacción, fechas, lo que se acreditó y los reembolsos, sin nada que vincule el registro con tu cuenta
+  del juego. Estos registros son los únicos datos que se conservan tras la eliminación permanente.</li>
 <li>Copias de seguridad: en producción, la recuperación a un punto en el tiempo de DynamoDB puede conservar datos eliminados en copias de seguridad hasta 35 días después de la eliminación permanente.</li>
 </ul>
 <h2>6. Tus derechos y cómo eliminar tus datos</h2>
