@@ -6,7 +6,7 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main{max-width:860px;margin:0 auto;padding:32px 16px 64px}
 header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
-header nav a{color:var(--muted);text-decoration:none;margin-left:12px}header strong{font-size:1.2rem}
+header nav a{display:inline-block;color:var(--muted);text-decoration:none;margin-left:12px;border:1px solid transparent;border-radius:999px;padding:2px 10px}header nav a[aria-current="page"]{border-color:var(--accent);color:var(--accent);font-weight:600}header strong{font-size:1.2rem}
 a{color:var(--accent)}h1{margin-top:40px}h2{margin-top:28px;font-size:1.15rem}
 .table{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem;background:var(--card)}
 th,td{border:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}th{background:var(--bg)}
@@ -35,7 +35,7 @@ header .brand{display:flex;align-items:center;gap:10px}header .brand img{width:3
 ul.feat{padding-left:20px}ul.links{list-style:none;padding:0;display:flex;gap:8px 20px;flex-wrap:wrap}
 </style>
 <script>document.documentElement.classList.add('js')</script></head>
-<body><main><header><span class="brand"><img src="assets/logo.png" alt="" width="32" height="32"><strong>Frostforge</strong></span><nav><a href="./" data-href="./">Home</a><a href="privacy-policy.html" data-href="privacy-policy.html">Privacy</a><a href="terms.html" data-href="terms.html">Terms</a><a href="delete-account.html" data-href="delete-account.html">Delete account</a><a href="credits.html" data-href="credits.html">Credits</a></nav></header>
+<body><main><header><span class="brand"><img src="assets/logo.png" alt="" width="32" height="32"><strong>Frostforge</strong></span><nav><a href="./" data-href="./" aria-current="page">Home</a><a href="privacy-policy.html" data-href="privacy-policy.html">Privacy</a><a href="terms.html" data-href="terms.html">Terms</a><a href="delete-account.html" data-href="delete-account.html">Delete account</a><a href="credits.html" data-href="credits.html">Credits</a></nav></header>
 <div class="langs" role="group" aria-label="Language / Idioma"><button type="button" data-lang="en" lang="en" aria-pressed="true"><span aria-hidden="true">🇺🇸</span> EN</button><button type="button" data-lang="pt-br" lang="pt-BR" aria-pressed="false"><span aria-hidden="true">🇧🇷</span> PT-BR</button><button type="button" data-lang="es" lang="es-419" aria-pressed="false"><span aria-hidden="true">🇪🇸</span> ES</button></div>
 <p class="nojs-langs"><a href="#en" lang="en">EN</a><a href="#pt-br" lang="pt-BR">PT-BR</a><a href="#es" lang="es-419">ES</a></p>
 <section data-lang="en" lang="en">
