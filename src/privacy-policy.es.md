@@ -50,6 +50,7 @@ el correo de la cuenta de Google o Apple con la que inicias sesión, solo para r
 - **GitHub, Inc.** (Estados Unidos), proveedor de servicios que aloja nuestro sistema de seguimiento de solicitudes. El texto de tus solicitudes de soporte y respuestas, y tu código de soporte, se procesan allí solo para atender tu solicitud. No se usan para ninguna otra finalidad. Encargado del tratamiento.
 - **Anthropic, PBC** (Estados Unidos), proveedora de las herramientas de IA que ayudan a nuestro equipo a leer, clasificar y redactar respuestas a las solicitudes de soporte. Recibe el contenido de las solicitudes de soporte, incluidas las imágenes adjuntas, solo para esa finalidad. Encargado del tratamiento.
 - Las imágenes de las solicitudes de soporte nunca se publican en GitHub.
+- Las solicitudes de soporte pueden ser leídas y respondidas con ayuda de herramientas automatizadas (herramientas de IA operadas por nuestro equipo, proporcionadas por Anthropic arriba). Las respuestas se redactan solo para tu solicitud; no lo usamos para decidir por sí solo nada sobre tu cuenta.
 - **Otros jugadores** del mismo mapa mundial ven la posición de tu base, tus marchas y los nodos de recursos que ocupas,
   con un código que no es el id de tu cuenta. No se muestra ningún nombre, correo ni identificador de Google/Apple.
 - Nadie más. Podemos divulgar datos si la ley lo exige.
